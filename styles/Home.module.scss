@@ -1,0 +1,89 @@
+
+@import 'vars_templates';
+
+.h2_color {
+  color: $header_primary;
+}
+
+.img_portrait {
+  position: absolute;
+  right: 80px;
+  top: 160px;
+  height: 650px;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background-color: white;
+}
+
+.personInfo {
+  height: calc(100vh - 383px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.personInfo__name {
+  font-family: Lora;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 77px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.personInfo__titles {
+  font-family: Nunito Sans;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* About section ----------------- */
+.homeAbout__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.homeAbout__imgWrapper {}
+
+.homeAbout__contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  width: 452px;
+} 
+
+.homeAbout__title {
+  font-family: Lora;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.homeAbout__text {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* Article section ----------------- */
+.homeArticles__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  min-height: 40px;
+  margin-top: 40px;  
+}
+.homeArticles__arrowWrapper {
+  margin: 0px 5px;
+}

@@ -1,0 +1,51 @@
+
+@import 'vars_templates';
+
+.fdbks_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fdbks__sigleFbdk {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 663px;
+  height: 301px;
+  border: 1px solid black;  
+  padding: 5px;
+}
+
+.fdbks__textblock {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.fdbks__bold {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;  
+}
+
+.fdbks__date {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+  margin-right: 20px;
+}
+
+
+
+

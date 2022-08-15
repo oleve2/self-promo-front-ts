@@ -1,0 +1,30 @@
+
+.menu__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.menu__ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__li {
+  margin-right: 20px;
+}
+
+.menu__li a {
+  text-decoration: none;
+  color: black;
+  
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}

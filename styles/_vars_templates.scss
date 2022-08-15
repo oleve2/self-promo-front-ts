@@ -1,0 +1,121 @@
+
+/* variables --------------------------------- */
+$header_primary: blue; 
+$header_secondary: red;
+$backgr-color: #EEF7FF;
+
+/* common styles --------------------------------- */
+.PageHeader {
+  min-height: 383px;
+  background-color: #EEF7FF;
+}
+
+.div_textQuote {
+  font-family: Gilroy;
+  font-size: 70px;
+  font-weight: 250;
+  line-height: 85px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: #436A8B;
+}
+
+.div_textQuoteAuthor {
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: right;
+  
+}
+
+
+.btnSignUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 258px;
+  height: 67px;
+  background-color: #2B7276;
+  color: white;
+
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+%divPage_template {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.divMain {
+  margin: 0 auto;
+  width: 100%;
+}
+.divPageFitCont {
+  @extend %divPage_template;
+  min-height: fit-content;
+}
+.divPage {
+  @extend %divPage_template;
+}
+.divPageW90 {
+  @extend %divPage_template;
+  width: 90%;
+}
+.divPageH70W90 {
+  @extend %divPage_template;
+  width: 90%;
+  min-height: 70vh;
+}
+
+
+
+
+.title_h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: Nunito Sans;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 68px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title_h2::before {
+  content: "";
+  height: 99px;
+  border-left: 1px solid black;
+  position: absolute;
+  top: -85px;
+}
+
+
+.linkWithArrow {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+  color: #458880;
+}
+
+/* template blocks ---------------------------------  */
+
+
+

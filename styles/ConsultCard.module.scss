@@ -1,0 +1,50 @@
+
+@import 'vars_templates';
+
+.consult_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 393px;
+  height: 708px;
+  border: 1px solid black;
+}
+
+.consult_card__imgWrapper {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.consult_card__title {
+  font-family: Lora;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.consult_card__aim {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.consult_card__details {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+
+
+
+
