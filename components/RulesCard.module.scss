@@ -1,0 +1,21 @@
+
+.card_wrapper {
+  border: 1px solid black;
+  width: 800px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__content {
+  height: fit-content;
+  /*border: 1px solid blue;*/
+  padding: 10px;
+}
+
+

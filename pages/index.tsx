@@ -31,16 +31,21 @@ const Home: NextPage = () => {
       </div>
 
       <main className={homeP.divMain}>
-        <div className={homeP.img_portrait}>
-          <Image src={portraitMain} alt="портрет 1"></Image>
+        <div className={homeP.personInfo_wrapper}>
+          <div className={homeP.personInfo}>
+            <div className={homeP.personInfo__name}>Айгуль</div>
+            <div className={homeP.personInfo__name}>Дейнекина</div>
+            <div className={homeP.personInfo__titles}>Психолог, Гештальт и ЕМДТ терапевт</div>
+            <div className={homeP.btnSignUp}>Записаться</div>
+          </div>
+
+          <div className={homeP.img_portrait}>
+            <Image src={portraitMain} alt="портрет 1"/> 
+          </div>
         </div>
-        
-        <div className={homeP.personInfo}>
-          <div className={homeP.personInfo__name}>Айгуль</div>
-          <div className={homeP.personInfo__name}>Дейнекина</div>
-          <div className={homeP.personInfo__titles}>Психолог, Гештальт и ЕМДТ терапевт</div>
-          <div className={homeP.btnSignUp}>Записаться</div>
-        </div>
+
+        <div style={{height:'calc(100vh - 383px)', display:'flex'}}></div>
+
 
         <div className={homeP.divPageW90}>
           <h2 className={homeP.title_h2}>Консультации и терапия</h2>
