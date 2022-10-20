@@ -1,0 +1,36 @@
+
+@import '../styles/commonStyles';
+
+.rules_header__text {
+  font-size: 25px;
+}
+
+.rules_line_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.rules_line {
+  display: grid;
+  grid-template-columns: 200px 60px 200px;
+}
+
+.rules_divCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  margin-bottom: 20px;
+}
+
+.rules_annotation {
+  width: 600px;
+
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  margin-bottom: 40px;
+}  

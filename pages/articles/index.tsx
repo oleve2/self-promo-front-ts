@@ -8,10 +8,7 @@ import Footer from "../../components/Footer";
 // styles
 
 
-
-
 const Articles:FC = () => {
-  
   const numsLinks = () => {
     let arr = [1,2,3,4,5,6];
     return arr.map( (item) => {
@@ -24,17 +21,20 @@ const Articles:FC = () => {
   return (<>
   <Menu />
   
-  <div>page Articles</div>
+  <div style={{height:'100vh'}}>
+    <div>page articles (under construction)</div>
+    <ul>
+      { links.map( (item) => {
+        return <li key={item}>
+          <Link href={item}>{item}</Link>
+        </li> 
+      }) }
+    </ul>
 
-  <ul>
-    { links.map( (item) => {
-      return  <li>
-        <Link href={item}>{item}</Link>
-      </li> 
-    }) }
-  </ul>
+    
+  </div>
 
-  <Footer />
+  <Footer />  
   </>)
 }
 

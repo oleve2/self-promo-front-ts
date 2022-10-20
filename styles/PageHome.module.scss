@@ -1,5 +1,5 @@
 
-@import 'vars_templates';
+@import '_commonStyles';
 
 .h2_color {
   color: $header_primary;
@@ -11,10 +11,13 @@
   justify-content: center;
   padding: 10px;
   background-color: white;
+  width: 636px;
+  height: 642px;
 }
 
 .personInfo_wrapper {
   display: flex;
+  min-width: 1200px;
   position: absolute;
   top: 200px;
   left: 10%;
@@ -26,8 +29,8 @@
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
-  width: 450px;
-  justify-content: flex-end;
+  width: 600px;
+  justify-content: space-between;
 }
 .personInfo__name {
   font-family: Lora;
@@ -51,23 +54,27 @@
 /* About section ----------------- */
 .homeAbout__wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  min-width: 1200px;
 }
 
-.homeAbout__imgWrapper {}
+.homeAbout__imgWrapper {
+  width: 622px;
+}
 
 .homeAbout__contentWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;  
   width: 452px;
+  margin-left: 50px;
 } 
 
 .homeAbout__title {
   font-family: Lora;
   font-size: 35px;
   font-weight: 400;
-  line-height: 45px;
+  line-height: 44.8px;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -78,6 +85,7 @@
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
+  margin-bottom: 10px;
 }
 
 /* Article section ----------------- */
@@ -89,5 +97,46 @@
   margin-top: 40px;  
 }
 .homeArticles__arrowWrapper {
-  margin: 0px 5px;
+  /*width: fit-content;*/
+  width: 50px;
+  margin: 0 auto;  
 }
+
+/* I can help section */
+.help_ul {
+  padding: 0;
+  list-style: none;  
+  width: 900px;
+  margin: 60px auto;  
+}
+.help_li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  
+  margin: 40px auto;
+}
+.help_litext {
+  max-width: 800px;
+  margin-left: 40px;
+
+  font-family: Lora;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+}
+
+
+.backgrrelative {
+  background-color: rgb(238, 247, 255);
+  height: 550px;
+  position: relative;
+  bottom: 550px;
+  z-index: -1;
+  margin-bottom: -500px;
+  min-width: 1200px;  
+}
+
+

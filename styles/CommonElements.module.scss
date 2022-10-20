@@ -1,14 +1,24 @@
 
-/* variables --------------------------------- */
-$header_primary: blue; 
-$header_secondary: red;
-$backgr-color: #EEF7FF;
+@import 'commonStyles';
+
+.rootWrapper {
+  width: 1400px;
+  margin: 0 auto;
+}
 
 /* common styles --------------------------------- */
 .PageHeader {
   min-height: 383px;
   background-color: #EEF7FF;
 }
+.PageHeader2 {
+  position: relative;
+  top: -70px;
+  min-height: 383px;
+  background-color: #EEF7FF;
+  z-index: -1;
+}
+
 
 .div_textQuote {
   font-family: Gilroy;
@@ -77,8 +87,6 @@ $backgr-color: #EEF7FF;
 }
 
 
-
-
 .title_h2 {
   display: flex;
   align-items: center;
@@ -113,7 +121,12 @@ $backgr-color: #EEF7FF;
   color: #458880;
 }
 
-/* template blocks ---------------------------------  */
-
-
-
+.linkWithArrow:after {
+  content: '';
+  background-image: url('../public/common/arrow16.png');
+  background-size: 163px 5px;
+  display: block;
+  width: 163px;
+  height: 5px;
+  margin-top: 10px;
+}

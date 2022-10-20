@@ -1,29 +1,29 @@
 import { FC } from "react";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 
 // styles
-import artcard from '../styles/ArticleCard.module.scss';
+import ce from '../styles/CommonElements.module.scss';
+import artcard from './ArticleCard.module.scss';
 
-// image
-import article1 from '../public/homepage/article1.png';
-
-interface ArticleCardProps {}
+interface ArticleCardProps {
+  img: StaticImageData,
+  title?: String,
+  text?: String,
+}
 
 const ArticleCard:FC<ArticleCardProps> = (props) => {
   return ( <div className={artcard.wrapper}>
     <div className={artcard.articleCard__imgWrapper}>
-      <Image src={article1} alt="photo"/>
+      <Image src={props.img} alt="photo"/>
     </div>
 
-    <div className={artcard.articleCard__title}>Откладывание на завтра</div>
+    <div className={artcard.articleCard__title}>{props.title}</div>
     
     <div className={artcard.articleCard__text}>
-    Прокрастинация, лень, самосаботаж, сопротивление — это синонимы одного и тоже процесса — откладывания на потом важного.
-    В результате невыполненные дела накапливаются как снежный ком, нарастает тревога и появляется вина. 
-    Кроме этого включается внутренний критик, который начинает уничтожать нашу веру в себя и последнее желание что-то делать.      
+    {props.text}
     </div>
 
-    <div className={artcard.linkWithArrow}>Читать дальше</div>
+    <div className={ce.linkWithArrow}>Читать дальше</div>
   </div>
   )
 }

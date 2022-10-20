@@ -1,0 +1,20 @@
+
+@font-face {
+  font-family: Gilroy;
+  src: url('../public/fonts/GilroyRegular.woff') format('woff');
+}
+@font-face {
+  font-family: Nunito Sans;
+  src: url('../public/fonts/NunitoSansRegular.woff') format('woff');
+}
+@font-face {
+  font-family: Lora;
+  src: url('../public/fonts/LoraRegular.woff') format('woff');
+}
+
+/* variables --------------------------------- */
+$header_primary: blue; 
+$header_secondary: red;
+$backgr-color: #EEF7FF;
+
+

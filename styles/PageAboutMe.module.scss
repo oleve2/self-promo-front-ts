@@ -1,5 +1,5 @@
 
-@import 'vars_templates';
+@import '../styles/commonStyles';
 
 .about_header {
   display: flex;
@@ -12,8 +12,13 @@
 }
 
 .about_header__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
-  background: white;  
+  background-color: white;
+  width: 636px;
+  height: 642px;
 }
 .about_header__content {
   display: flex;
@@ -42,6 +47,7 @@
   letter-spacing: 0em;
   text-align: left;  
   min-height: 80px;
+  text-transform: uppercase;
 }
 .about_qualif_card__text {
   font-family: Nunito Sans;

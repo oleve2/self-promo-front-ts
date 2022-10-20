@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // styles
-import footer from '../styles/Footer.module.scss';
+import footer from './Footer.module.scss';
 
 // images
 import footer_vk from '../public/footer/footer_vk.png';

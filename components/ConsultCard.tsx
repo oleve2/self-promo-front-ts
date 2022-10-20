@@ -1,33 +1,43 @@
 import { FC } from "react";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 
 // styles
-import ConsultCardSt from '../styles/ConsultCard.module.scss';
-import thercons1 from '../public/homepage/thercons1.png';
+import ce from '../styles/CommonElements.module.scss';
+import ConsultCardSt from './ConsultCard.module.scss';
 
-interface ConsultCardProps {}
+// images
+//import thercons1 from '../public/homepage/thercons1.png';
+
+interface ConsultCardProps {
+  img: StaticImageData,
+  title?: String,
+  aim?: String,
+  duration?: String,
+  online_offline?: String,
+  price?: String,
+}
 
 const ConsultCard:FC<ConsultCardProps> = (props) => {
   return (<div className={ConsultCardSt.consult_card}>
     <div className={ConsultCardSt.consult_card__imgWrapper}>
-      <Image src={thercons1} alt="therapy"/>
+      <Image src={props.img} alt="therapy"/>
     </div>
     
     <div className={ConsultCardSt.consult_card__title}>
-      Психологическое консультирование
+      {props.title}
     </div> 
 
     <div className={ConsultCardSt.consult_card__aim}>
-      Решает актуальную жизненную задачу, с которой вам трудно справиться самостоятельно.
+      {props.aim}
     </div>
 
     <div className={ConsultCardSt.consult_card__details}>
-      <div>Длительность 50 минут.</div>
-      <div>Очно / Онлайн.</div>
-      <div>Стоимость консультации от 4000 рублей.</div>      
+      <div>Длительность {props.duration}.</div>
+      <div>{props.online_offline}.</div>
+      <div>Стоимость консультации {props.price}.</div>      
     </div>
 
-    <div className={ConsultCardSt.btnSignUp}>Записаться</div>
+    <div className={ce.btnSignUp}>Записаться</div>
   </div>  
   )
 }

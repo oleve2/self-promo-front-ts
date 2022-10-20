@@ -1,5 +1,5 @@
 
-@import 'vars_templates';
+@import '../styles/commonStyles';
 
 .formdiv {
   display: flex;
@@ -16,7 +16,7 @@
 
 .commform__inputsWrappers {
   display: flex;
-  min-width: 800px;
+  width: 800px;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -25,14 +25,15 @@
 .commform__input {
   width: 50%;
   height: 52px;
-  margin: 10px;
   padding-left: 20px;
 }
+
+.commform__name {margin-right: 10px}
+.commform__email {margin-left: 10px}
 
 .commform__textarea {
   width: 100%;
   height: 137px;
-  margin: 10px;
   padding: 20px;
 }
 
