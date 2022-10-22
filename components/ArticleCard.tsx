@@ -7,8 +7,8 @@ import artcard from './ArticleCard.module.scss';
 
 interface ArticleCardProps {
   img: StaticImageData,
-  title?: String,
-  textArr?: String[],
+  title: String,
+  textArr: String[],
 }
 
 const ArticleCard:FC<ArticleCardProps> = (props) => {
@@ -20,8 +20,8 @@ const ArticleCard:FC<ArticleCardProps> = (props) => {
     <div className={artcard.articleCard__title}>{props.title}</div>
     
     <div className={artcard.articleCard__text}>
-    {props.textArr.map( (item) => {
-      return <div>{item}</div>
+    {props.textArr.map( (item, index) => {
+      return <div key={index}>{item}</div>
     })}
     </div>
 
