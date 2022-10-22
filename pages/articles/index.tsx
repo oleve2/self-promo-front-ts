@@ -6,7 +6,7 @@ import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
 
 // styles
-
+import ce from '../../styles/CommonElements.module.scss';
 
 const Articles:FC = () => {
   const numsLinks = () => {
@@ -18,24 +18,23 @@ const Articles:FC = () => {
 
   const links = numsLinks();
 
-  return (<>
-  <Menu />
-  
-  <div style={{height:'100vh'}}>
-    <div>page articles (under construction)</div>
-    <ul>
-      { links.map( (item) => {
-        return <li key={item}>
-          <Link href={item}>{item}</Link>
-        </li> 
-      }) }
-    </ul>
-
+  return (
+  <div className={ce.rootWrapper}>
+    <Menu />
     
-  </div>
+    <div style={{height:'100vh'}}>
+      <div>page articles (under construction)</div>
+      <ul>
+        { links.map( (item) => {
+          return <li key={item}>
+            <Link href={item}>{item}</Link>
+          </li> 
+        }) }
+      </ul>
+    </div>
 
-  <Footer />  
-  </>)
+    <Footer />  
+  </div>)
 }
 
 export default Articles;

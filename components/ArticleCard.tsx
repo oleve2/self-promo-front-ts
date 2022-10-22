@@ -8,7 +8,7 @@ import artcard from './ArticleCard.module.scss';
 interface ArticleCardProps {
   img: StaticImageData,
   title?: String,
-  text?: String,
+  textArr?: String[],
 }
 
 const ArticleCard:FC<ArticleCardProps> = (props) => {
@@ -20,7 +20,9 @@ const ArticleCard:FC<ArticleCardProps> = (props) => {
     <div className={artcard.articleCard__title}>{props.title}</div>
     
     <div className={artcard.articleCard__text}>
-    {props.text}
+    {props.textArr.map( (item) => {
+      return <div>{item}</div>
+    })}
     </div>
 
     <div className={ce.linkWithArrow}>Читать дальше</div>

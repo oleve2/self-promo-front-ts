@@ -5,19 +5,10 @@
   color: $header_primary;
 }
 
-.img_portrait {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: white;
-  width: 636px;
-  height: 642px;
-}
 
 .personInfo_wrapper {
   display: flex;
-  min-width: 1200px;
+  max-width: 1400px;
   position: absolute;
   top: 200px;
   left: 10%;
@@ -30,6 +21,7 @@
   width: 90%;
   margin: 0 auto;
   width: 600px;
+  min-width: 600px;
   justify-content: space-between;
 }
 .personInfo__name {
@@ -49,6 +41,18 @@
   letter-spacing: 0em;
   text-align: left;
   margin-bottom: 40px;
+}
+
+
+.img_portrait {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  width: 636px;
+  min-width: 636px;
+  height: 642px;
 }
 
 /* About section ----------------- */

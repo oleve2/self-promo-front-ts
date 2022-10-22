@@ -5,6 +5,9 @@ import { useEffect } from 'react';
 import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
 
+// styles
+import ce from '../../styles/CommonElements.module.scss';
+
 
 const Contacts:FC = () => {
   useEffect( () => {
@@ -12,15 +15,15 @@ const Contacts:FC = () => {
   }, [])
 
   return (
-    <>
-    <Menu />
+    <div className={ce.rootWrapper}>
+      <Menu />
 
-    <div style={{height:'100vh'}}>
-      page contacts (under construction)
+      <div style={{height:'100vh'}}>
+        page contacts (under construction)
+      </div>
+
+      <Footer />
     </div>
-
-    <Footer />
-    </>
   )
 }
 

@@ -2,7 +2,7 @@
 @import 'commonStyles';
 
 .rootWrapper {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -82,7 +82,7 @@
 }
 .divPageH70W90 {
   @extend %divPage_template;
-  width: 90%;
+  /*width: 90%;*/
   min-height: 70vh;
 }
 

@@ -24,7 +24,7 @@ const About:FC = () => {
   }, [])
 
   return (
-    <div>
+    <div className={ce.rootWrapper}>
       <Menu />
       <div className={ce.PageHeader2}></div>  
 

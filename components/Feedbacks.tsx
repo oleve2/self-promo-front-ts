@@ -67,7 +67,7 @@ const Feedbacks:FC = (props) => {
 
         <div style={{display:'flex'}}>
           <div className={fdbks.fdbks__date}>{feedbackActive.feedback_date}</div>
-          <div className="fdbks__stars">звезды</div>
+          {/*<div className="fdbks__stars">звезды</div>*/}
         </div>
       </div>  
       

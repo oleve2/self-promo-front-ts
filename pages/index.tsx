@@ -36,7 +36,7 @@ const Home: NextPage = () => {
   const router = useRouter();
 
   return (
-    <div>
+    <div className={ce.rootWrapper}>
       <Menu/>
       <div className={ce.PageHeader2}></div>
 
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
         </ul>
       </div>
       
-      <div className={ce.divPageW90}>
+      <div className={ce.divPage}>
         <h2 className={ce.title_h2} id="consult_therapy">Консультации и терапия</h2>
         
         <div className="" style={{display:'flex', justifyContent:'space-between', marginBottom:'30px'}}>
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
         <div className={ce.div_textQuote}>Мы знаем, кто мы есть, но не знаем, кем мы можем быть</div>
       </div>
 
-      <div className={ce.divPageW90}>
+      <div className={ce.divPage}>
         <h2 className={ce.title_h2}>Обо мне</h2>
 
         <div className={homeP.homeAbout__wrapper}>
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
         { data_articles.map( (item, index) => {
           return <ArticleCard key={index} img={item.img}
             title={item.title}
-            text={item.text}
+            textArr={item.text}
           />
         }) }
         </div>
