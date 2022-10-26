@@ -22,14 +22,14 @@ const RulesCard:FC<RulesCardProps> = (props) => {
   return (
   <div className={rlcrd.card_wrapper}>
     <div style={{display:'flex'}}>
-      <div style={{marginRight:'30px'}}>
+      <div style={{marginRight:'30px', width:'40px'}}>
         <Image src={props.pic} alt="pic"/>
       </div>
       
       <div className={rlcrd.card__header}>
         <div>{props.title}</div>
 
-        <div onClick={() => { setisOpen(!isOpen) }}>
+        <div style={{width:'40px'}} onClick={() => { setisOpen(!isOpen) }}>
           { (isOpen) 
             ? <Image src={rule_opened} alt="open"/>
             : <Image src={rule_closed} alt="close"/>

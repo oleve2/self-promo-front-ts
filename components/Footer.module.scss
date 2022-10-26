@@ -1,10 +1,6 @@
+@import '../styles/commonStyles';
 
 .footer_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 350px;
-
   /*regular*/
   font-family: Nunito Sans;
   font-size: 16px;
@@ -12,9 +8,26 @@
   line-height: 35px;
   letter-spacing: 0em;
   text-align: left;
+
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 350px;    
+  }  
 }
 
 .footer__divBold {
+  text-decoration: none;
+  color: black;
+    
   font-family: Nunito Sans;
   font-size: 16px;
   font-weight: 700;

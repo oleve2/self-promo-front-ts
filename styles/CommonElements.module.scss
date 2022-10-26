@@ -21,14 +21,24 @@
 
 
 .div_textQuote {
-  font-family: Gilroy;
-  font-size: 70px;
-  font-weight: 250;
-  line-height: 85px;
-  letter-spacing: 0em;
-  text-align: left;
+  @media screen and (max-width: $screen_mobile) {
+    font-family: Gilroy;
+    font-size: 40px;
+    color: #436A8B;
+    margin-bottom: 20px;  
+    text-align: center;
+  }
 
-  color: #436A8B;
+  @media screen and (min-width: $screen_desktop) {
+    font-family: Gilroy;
+    font-size: 70px;
+    font-weight: 250;
+    line-height: 85px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #436A8B;
+  }  
+
 }
 
 .div_textQuoteAuthor {
@@ -58,6 +68,7 @@
   text-align: center;
 }
 
+/* main containers (old)---------------------------------------- */
 %divPage_template {
   min-height: 100vh;
   width: 100%;
@@ -80,13 +91,14 @@
   @extend %divPage_template;
   width: 90%;
 }
-.divPageH70W90 {
+.divPageH70 {
   @extend %divPage_template;
-  /*width: 90%;*/
   min-height: 70vh;
 }
 
+/* main containers (responsive)---------------------------------------- */
 
+/* h2 title for blocks ---------------------------------------- */
 .title_h2 {
   display: flex;
   align-items: center;
@@ -109,7 +121,7 @@
   top: -85px;
 }
 
-
+/* <a> link with error style and pseudo */  
 .linkWithArrow {
   font-family: Inter;
   font-size: 16px;
@@ -130,3 +142,15 @@
   height: 5px;
   margin-top: 10px;
 }
+
+/* blue background block */
+.backgrrelative {
+  background-color: rgb(238, 247, 255);
+  height: 550px;
+  position: relative;
+  bottom: 550px;
+  z-index: -1;
+  margin-bottom: -500px;
+}
+
+

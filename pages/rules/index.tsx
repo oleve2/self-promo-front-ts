@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image, { StaticImageData } from "next/image";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // components
 import Menu from "../../components/Menu";
@@ -18,8 +18,24 @@ import imgStones from '../../public/pageRules/imgStones.png';
 // data
 import { data_rules } from '../../dataJson/rules';
 
+// hooks
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const Rules:FC = () => {
+  const windim = useWindowDimensions();
+  const [isDesktop, setisDesktop] = useState(false);
+  const mobBP : number= +process.env.NEXT_PUBLIC_MOBILE_BREAKPOINT!;
+
+  useEffect( () => {
+    if (windim !== undefined) {
+      if (windim.width! >= mobBP ) {
+        setisDesktop(true);
+      } else {
+        setisDesktop(false)
+      }      
+    }
+  },[windim, mobBP])
+
 
   useEffect( () => {
     document.title = 'Психолог Айгуль Дейнекина: Правила работы';
@@ -28,13 +44,13 @@ const Rules:FC = () => {
   //
   return (
   <div className={ce.rootWrapper}>
-    <Menu />
+    <Menu isDesktop={isDesktop}/>
     <div className={ce.PageHeader2}></div> 
       
     {/* элемент абсолютное позиционирование */} 
     <div className={homeP.personInfo_wrapper}>
-      <div className={homeP.personInfo} style={{marginRight:'40px', height:'642px', width:'700px'}}>
-        <div className={ce.div_textQuote}>Договорённость заранее избавляет от недопонимания в дальнейшем </div>
+      <div className={homeP.personInfo}>
+        { isDesktop && <div className={ce.div_textQuote}>Договорённость заранее избавляет от недопонимания в дальнейшем </div> }
 
         <div className={homeP.homeAbout__text} style={{fontSize:'25px'}}>
           Мировая психотерапевтическая практика практическим путем вывела психотерапевтические правила работы. 
@@ -50,7 +66,7 @@ const Rules:FC = () => {
     </div>
     
     {/* кусок до полной страницы */}
-    <div style={{height:'calc(100vh - 383px)', display:'flex'}}></div>      
+    <div style={{height:'150px'}}></div>
 
     <div className={ce.divPage}>
       <h2 className={ce.title_h2}>Правила работы</h2>
@@ -74,7 +90,7 @@ const Rules:FC = () => {
       </div>
     </div>
 
-    <Footer />
+    <Footer isDesktop={isDesktop}/>
   </div>)
 }
 

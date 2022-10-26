@@ -1,0 +1,69 @@
+@import '../styles/commonStyles';
+
+.about_qualif_div {
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+  }
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    justify-content: space-evenly;    
+  }
+}
+.about_qualif_card {
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    min-height: 300px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    min-height: 300px;    
+  }  
+}
+.about_qualif_card__title {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;  
+  min-height: 80px;
+  text-transform: uppercase;
+}
+.about_qualif_card__text {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  min-height: 200px;
+}
+.about_qualif_card__img {
+  height: 300px;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* style={{margin:'40px 40px 20px 60px'}} */
+.additionalQual_title {
+  margin: 40px 40px 20px 60px;
+
+  @media screen and (max-width: $screen_mobile) {
+    text-align: center;
+  }
+}
+/* style={{textTransform:'uppercase', fontWeight:'bold'}} */
+.additionalQual_marked {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+

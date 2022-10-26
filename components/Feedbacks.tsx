@@ -77,7 +77,7 @@ const Feedbacks:FC = (props) => {
       </div>              
     </div>
     
-    <div style={{display:'flex', width:'663px', justifyContent:'flex-start', marginTop:'20px'}}>
+    <div style={{display:'flex', maxWidth:'663px', justifyContent:'flex-start', marginTop:'20px'}}>
       <div className={ce.linkWithArrow}>оставить отзыв</div>
     </div>
     

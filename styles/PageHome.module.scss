@@ -5,73 +5,150 @@
   color: $header_primary;
 }
 
-
+/* first block: text and image */ 
 .personInfo_wrapper {
-  display: flex;
-  max-width: 1400px;
-  position: absolute;
-  top: 200px;
-  left: 10%;
-  right: 10%;
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 300px;
+    margin-bottom: -340px;    
+  }
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    position: relative;
+    bottom: 300px;
+    margin-bottom: -340px;
+  }
 }
+
+/*информация*/
 .personInfo {
-  height: calc(100vh - 383px);
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
-  width: 600px;
-  min-width: 600px;
-  justify-content: space-between;
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding: 0 30px;
+    /*margin-bottom: 20px;*/
+  }
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    width: 600px;
+    /*min-width: 600px;*/
+    justify-content: space-between;
+    position: relative;
+  }
 }
 .personInfo__name {
-  font-family: Lora;
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 77px;
-  letter-spacing: 0.02em;
-  text-align: left;
-  margin-bottom: 20px;  
+  @media screen and (max-width: $screen_mobile) {
+    font-family: Lora;
+    font-size: 30px;
+    margin-bottom: 20px;  
+  }
+  @media screen and (min-width: $screen_desktop) {
+    font-family: Lora;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 77px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    margin-bottom: 20px;  
+  }
 }
 .personInfo__titles {
   font-family: Nunito Sans;
-  font-size: 24px;
   font-weight: 400;
   line-height: 33px;
   letter-spacing: 0em;
   text-align: left;
   margin-bottom: 40px;
+  font-size: 24px;
 }
 
-
+/*фото*/
 .img_portrait {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: white;
-  width: 636px;
-  min-width: 636px;
-  height: 642px;
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+    width: 50%;
+    min-width: 636px;
+    height: 642px;
+  }  
 }
+
+/* Consultations section ----------------- */
+.homeConsultations_wrapper {
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    margin-bottom: 30px;
+
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  } 
+}
+
+
 
 /* About section ----------------- */
 .homeAbout__wrapper {
-  display: flex;
-  justify-content: center;
-  min-width: 1200px;
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    justify-content: center;
+    min-width: 1200px;    
+  }
 }
 
 .homeAbout__imgWrapper {
-  width: 622px;
+  @media screen and (max-width: $screen_mobile) {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: $screen_desktop) {
+    width: 622px;
+  }
 }
 
 .homeAbout__contentWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;  
-  width: 452px;
-  margin-left: 50px;
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+  }
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    width: 452px;
+    margin: 50px;
+  }
 } 
 
 .homeAbout__title {
@@ -81,6 +158,7 @@
   line-height: 44.8px;
   letter-spacing: 0em;
   text-align: left;
+  margin-bottom: 20px;
 }
 .homeAbout__text {
   font-family: Nunito Sans;
@@ -89,36 +167,60 @@
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
-  margin-bottom: 10px;
+  /*margin: 0px 20px 20px 20px;*/
+  
+  @media screen and (max-width: $screen_mobile) {
+    margin-bottom: 20px;
+  }
+
 }
 
 /* Article section ----------------- */
 .homeArticles__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-  min-height: 40px;
-  margin-top: 40px;  
+  @media screen and (max-width: $screen_mobile) { /*  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;  
+  }
+
+  @media screen and (min-width: $screen_desktop) { /*  */
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;   
+  }
 }
+
 .homeArticles__arrowWrapper {
   /*width: fit-content;*/
   width: 50px;
   margin: 0 auto;  
 }
 
-/* I can help section */
+/* "I can help" section -----------------*/
 .help_ul {
-  padding: 0;
+  padding: 20px;
   list-style: none;  
-  width: 900px;
+  max-width: 900px;
   margin: 60px auto;  
 }
 .help_li {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;  
+  display: grid;
+  grid-template-columns: 40px 1fr;
   margin: 40px auto;
+  /*align-items: center;
+  justify-content: flex-start;  
+  */
 }
+
+.help_imgwrapper {
+  width: 40px;
+}
+
 .help_litext {
   max-width: 800px;
   margin-left: 40px;
@@ -133,14 +235,6 @@
 }
 
 
-.backgrrelative {
-  background-color: rgb(238, 247, 255);
-  height: 550px;
-  position: relative;
-  bottom: 550px;
-  z-index: -1;
-  margin-bottom: -500px;
-  min-width: 1200px;  
-}
+
 
 

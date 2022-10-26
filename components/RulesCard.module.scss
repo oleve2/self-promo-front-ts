@@ -3,7 +3,7 @@
 
 .card_wrapper {
   border: 1px solid black;
-  width: 800px;
+  width: 100%;
   margin-bottom: 20px;
   padding: 10px;
 }
@@ -14,11 +14,19 @@
   justify-content: space-between;
   width: 100%;
   font-family: Lora;
-  font-size: 30px;
+  text-align: left;
+  
   font-weight: 400;
   line-height: 38px;
   letter-spacing: 0em;
-  text-align: left;
+
+  @media screen and (max-width: $screen_mobile) {
+    font-size: 15px;
+  }
+
+  @media screen and (min-width: $screen_desktop) {
+    font-size: 30px;
+  }
 }
 
 .card__content {
