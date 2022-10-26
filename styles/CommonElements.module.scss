@@ -23,7 +23,7 @@
 .div_textQuote {
   @media screen and (max-width: $screen_mobile) {
     font-family: Gilroy;
-    font-size: 40px;
+    font-size: 30px;
     color: #436A8B;
     margin-bottom: 20px;  
     text-align: center;
@@ -66,6 +66,8 @@
   line-height: 22px;
   letter-spacing: 0.1em;
   text-align: center;
+
+  
 }
 
 /* main containers (old)---------------------------------------- */
@@ -105,12 +107,21 @@
   justify-content: center;
   
   font-family: Nunito Sans;
-  font-size: 50px;
+  
   font-weight: 300;
-  line-height: 68px;
+  
   letter-spacing: 0.1em;
   text-align: center;
   margin-top: 100px;
+
+  @media screen and (max-width: $screen_mobile) {
+    font-size: 32px;
+    line-height: 43px;
+  }
+  @media screen and (min-width: $screen_desktop) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .title_h2::before {

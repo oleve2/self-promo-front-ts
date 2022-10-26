@@ -21,7 +21,7 @@ const Communicationform:FC = (props) => {
         <div className={commf.commform__inputsWrappers} style={{marginTop:'180px'}}>
           <div className={ce.btnSignUp}>Записаться</div>
 
-          <div style={{width:'calc(800px - 250px)', marginLeft:'10px'}}>
+          <div className={commf.commform__agreement}>
             Нажимая на кнопку &quot;Записаться&quot;, Вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности.
           </div>
         </div>

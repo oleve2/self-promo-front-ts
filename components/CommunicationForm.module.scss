@@ -20,7 +20,6 @@
   @media screen and (max-width: $screen_mobile) {
     width: 100%;
   }
-
   @media screen and (min-width: $screen_desktop) {
     max-width: 600px;
     margin-left: auto;
@@ -31,20 +30,46 @@
 
 .commform__inputsWrappers {
   display: flex;
-  max-width: 800px;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+
+  @media screen and (min-width: $screen_desktop) {
+    max-width: 800px;
+  }
+  @media screen and (max-width: $screen_mobile) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .commform__input {
   width: 50%;
   height: 52px;
   padding-left: 20px;
+  /*@media screen and (max-width: $screen_mobile) {
+    font-size: 8px;
+  }*/
 }
 
-.commform__name {margin-right: 10px}
-.commform__email {margin-left: 10px}
+.commform__name {
+  @media screen and (min-width: $screen_desktop) {
+    margin-right: 10px;    
+  }
+  @media screen and (max-width: $screen_mobile) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.commform__email {
+  @media screen and (min-width: $screen_desktop) {
+    margin-left: 10px;
+  }
+  @media screen and (max-width: $screen_mobile) {
+    width: 100%;
+    margin-bottom: 10px;
+  }  
+}
 
 .commform__textarea {
   width: 100%;
@@ -52,3 +77,13 @@
   padding: 20px;
 }
 
+
+.commform__agreement {
+  width: calc(800px - 250px);
+  margin-left: 10px;
+
+  @media screen and (max-width: $screen_mobile) {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

@@ -8,10 +8,13 @@
   /*border: 1px solid black;*/
   height: 700px;
   padding: 10px;
-  margin: 5px 10px;
+  /*margin: 5px 10px;*/
   min-width: 288px;
   width: 300px;
-  background-color: white;;
+  background-color: white;
+  @media screen and (max-width: $screen_mobile) {
+
+  }
 }
 
 .articleCard__imgWrapper {

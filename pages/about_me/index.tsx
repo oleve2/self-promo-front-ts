@@ -45,7 +45,7 @@ const About:FC = () => {
       <Menu isDesktop={isDesktop} />
       <div className={ce.PageHeader2}></div>
 
-      {/* элемент абсолютное позиционирование */}  
+      {/* */} 
       <div className={homeP.personInfo_wrapper}>
         <div className={homeP.img_portrait}>
           <Image src={portrAboutMe} alt="portrarait_aboutme"/>
@@ -71,7 +71,7 @@ const About:FC = () => {
         </div>
       </div>
 
-      {/* кусок до полной страницы */}
+      
       <div style={{height:'150px'}}></div>
 
       <div style={{margin:'0 20px'}}>
@@ -97,7 +97,7 @@ const About:FC = () => {
           </div>
         </div>
       </div>          
-
+ 
       <div className={ce.divPage}>
         <h2 className={ce.title_h2}>Запись на консультацию</h2>
         <CommunicationForm />

@@ -226,11 +226,19 @@
   margin-left: 40px;
 
   font-family: Lora;
-  font-size: 30px;
+  
   font-weight: 400;
   line-height: 38px;
   letter-spacing: 0em;
   text-align: left;
+  
+  @media screen and (max-width: $screen_mobile) {
+    font-size: 23px;
+  }
+
+  @media screen and (min-width: $screen_desktop) {
+    font-size: 30px;
+  }
   
 }
 
