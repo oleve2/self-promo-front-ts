@@ -9,9 +9,16 @@ import Footer from "../../components/Footer";
 
 // styles
 import ce from '../../styles/CommonElements.module.scss';
+import homeP from '../../styles/PageHome.module.scss';
 
 // hooks
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+
+// data
+import { LinkList } from "../../dataJson/articles_total";
+
+// types
+import { LinkListType } from "../../models/ArticleModels";
 
 const Articles:FC = () => {
   const windim = useWindowDimensions();
@@ -30,9 +37,9 @@ const Articles:FC = () => {
   
   
   const numsLinks = () => {
-    let arr = [1,2,3,4,5,6];
+    let arr: LinkListType[] = [...LinkList];
     return arr.map( (item) => {
-      return "/articles/" + item;
+      return {name: item.name, link: '/articles/'+ item.link};
     });
   }
 
@@ -41,13 +48,25 @@ const Articles:FC = () => {
   return (
   <div className={ce.rootWrapper}>
     <Menu isDesktop={isDesktop}/>
+    <div className={ce.PageHeader2}></div>
+
+    <div className={homeP.personInfo_wrapper}>
+      <div className={homeP.personInfo}>
+        <div className={ce.div_textQuote}>Статьи</div>
+      </div>
+
+      {/*<div className={homeP.img_portrait}>
+        <Image src={img_article1} alt="portrait_home"/> 
+      </div>*/}
+    </div>
+
+    <div style={{height:'150px'}}></div>      
     
-    <div style={{height:'100vh'}}>
-      <div>page articles (under construction)</div>
-      <ul>
-        { links.map( (item) => {
-          return <li key={item}>
-            <Link href={item}>{item}</Link>
+    <div className={ce.divPageW90}>
+      <ul style={{padding:'0', textDecoration:'none'}}>
+        { links.map( (item, index) => {
+          return <li key={index}>
+            <Link href={item.link}>{item.name}</Link>
           </li> 
         }) }
       </ul>
