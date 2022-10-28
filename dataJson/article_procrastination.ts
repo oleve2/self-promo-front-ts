@@ -1,13 +1,16 @@
 
-import { ArticleFull, ArticleBlock, PassageType } from "../models/ArticleModels";
+import { ArticleFull, PassageType } from "../models/ArticleModels";
+
+/* `Ключевые слова: прокрастинация, лень, сопротивление, перфекционизм, комплекс самозванца, тревожность.` */
 
 const ArticleProcrastination: ArticleFull = {
   linkname: 'procrastination',
-  headerText: 'ПРОКРАСТИНАЦИЯ',
+  headerText: 'Прокрастинация',
+  keywords: 'прокрастинация, лень, сопротивление, перфекционизм, комплекс самозванца, тревожность',
   blockList: [
     {type: PassageType.main_title, text: `ПРОКРАСТИНАЦИЯ`},
     {type: PassageType.text_bold, text: `“Перфекционизм ведет к прокрастинации”`},
-    {type: PassageType.text, text: `Ключевые слова: прокрастинация, лень, сопротивление, перфекционизм, комплекс самозванца, тревожность.`},
+    
     {type: PassageType.text, text: `Почему я не занимаюсь спортом? Почему не ищу лучшую работу? Почему не читаю книги? Почему купила очередной обучающий курс и не прохожу его?`},
     {type: PassageType.text, text: `Наше нежелание причинить себе добро вызывает наше сопротивление и нежелание. Мы словно враги своим желаниям и стремлениям.`},    
   

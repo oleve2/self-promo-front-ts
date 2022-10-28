@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 // components
 import Menu from "../../components/Menu";
@@ -37,17 +38,21 @@ const Rules:FC = () => {
   },[windim, mobBP])
 
 
-  useEffect( () => {
-    document.title = 'Психолог Айгуль Дейнекина: Правила работы';
-  }, [])
-
   //
   return (
   <div className={ce.rootWrapper}>
+    <Head>
+      <title>Психолог Айгуль Дейнекина - Правила работы</title>
+      <meta 
+        name="description"
+        content="Психолог Айгуль Дейнекина - Правила работы"
+        key="desc"
+        />        
+    </Head>
+
     <Menu isDesktop={isDesktop}/>
     <div className={ce.PageHeader2}></div> 
       
-    {/* элемент абсолютное позиционирование */} 
     <div className={homeP.personInfo_wrapper}>
       <div className={homeP.personInfo}>
         { isDesktop && <div className={ce.div_textQuote}>Договорённость заранее избавляет от недопонимания в дальнейшем </div> }
@@ -77,7 +82,6 @@ const Rules:FC = () => {
         </div>
       </div>
       
-      {/* тут будет список компонентов карточка инфы */}
       <div className={rulesP.rules_divCenter}>
       { data_rules.map( (item) => {
         return <RulesCard key={item.id} 

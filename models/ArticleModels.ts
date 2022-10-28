@@ -9,8 +9,9 @@ export enum PassageType {
 export interface ArticleFull {
   linkname: String,
   headerText: String,
+  keywords: string, //| String[]
   blockList: ArticleBlock[]
-}
+} 
 
 export interface ArticleBlock {
   type: PassageType,

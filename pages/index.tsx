@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 // components
 import Menu from '../components/Menu';
@@ -32,10 +33,6 @@ import useWindowDimensions from '../hooks/useWindowDimensions';
 
 
 const Home: NextPage = () => {
-  useEffect( () => {
-    document.title = 'Психолог Айгуль Дейнекина';
-  }, [])
-
   const windim = useWindowDimensions();
   const [isDesktop, setisDesktop] = useState(false);
   
@@ -51,12 +48,20 @@ const Home: NextPage = () => {
     }
   },[windim])
 
-
   const router = useRouter();
 
 
   return (
     <div className={ce.rootWrapper}>
+      <Head>
+        <title>Психолог Айгуль Дейнекина, Москва, EDMR, Психологические консультации</title>
+        <meta 
+          name="description"
+          content="Психолог Айгуль Дейнекина, Москва, EDMR, Психологические консультации"
+          key="desc"
+          />        
+      </Head>
+
       <Menu isDesktop={isDesktop}/>
       <div className={ce.PageHeader2}></div>
 
@@ -189,12 +194,12 @@ const Home: NextPage = () => {
             }) }
         </div>
 
-        <div style={{display:'flex', marginTop:'40px', justifyContent:'center'}}>
+        {/*<div style={{display:'flex', marginTop:'40px', justifyContent:'center'}}>
           <div style={{display:'flex', width:'150px'}}>
             <div className={homeP.homeArticles__arrowWrapper}> <Image src={arrToLeft} alt="arrLeft"/> </div>
             <div className={homeP.homeArticles__arrowWrapper}> <Image src={arrToRight} alt="arrRight"/> </div>
           </div>
-        </div>
+        </div>*/}
 
         { isDesktop && <div className={ce.backgrrelative}></div> }
       </div>

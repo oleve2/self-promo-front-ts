@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { useEffect, useState } from 'react';
+import Head from "next/head";
 
 // components
 import Menu from "../../components/Menu";
@@ -33,7 +34,16 @@ const Contacts:FC = () => {
 
   return (
     <div className={ce.rootWrapper}>
+    <Head>
+      <title>Психолог Айгуль Дейнекина - Контакты</title>
+      <meta 
+        name="description"
+        content="Психолог Айгуль Дейнекина - Контакты"
+        key="desc"
+        />        
+    </Head>      
       <Menu isDesktop={isDesktop}/>
+      <div className={ce.PageHeader2}></div> 
 
       <div style={{height:'100vh'}}>
         page contacts (under construction)

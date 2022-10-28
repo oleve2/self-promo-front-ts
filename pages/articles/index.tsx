@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 import { useState, useEffect } from "react";
 
@@ -47,6 +48,15 @@ const Articles:FC = () => {
 
   return (
   <div className={ce.rootWrapper}>
+    <Head>
+      <title>Психолог Айгуль Дейнекина - Статьи</title>
+      <meta 
+        name="description"
+        content="Психолог Айгуль Дейнекина - Статьи"
+        key="desc"
+        />
+    </Head>
+
     <Menu isDesktop={isDesktop}/>
     <div className={ce.PageHeader2}></div>
 
@@ -63,9 +73,9 @@ const Articles:FC = () => {
     <div style={{height:'150px'}}></div>      
     
     <div className={ce.divPageW90}>
-      <ul style={{padding:'0', textDecoration:'none'}}>
+      <ul style={{padding:'0', listStyleType:'none'}}>
         { links.map( (item, index) => {
-          return <li key={index}>
+          return <li key={index} style={{marginBottom:'10px'}}>
             <Link href={item.link}>{item.name}</Link>
           </li> 
         }) }

@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Head from "next/head";
 
 // components
 import Menu from '../../components/Menu';
@@ -11,7 +12,6 @@ import Footer from '../../components/Footer';
 import ce from '../../styles/CommonElements.module.scss';
 import homeP from '../../styles/PageHome.module.scss';
 import artN from '../../styles/PageArticleNames.module.scss';
-
 
 // articles data
 import AF from "../../dataJson/articles_total";
@@ -23,7 +23,7 @@ import { ArticleBlock, ArticleFull, PassageType } from "../../models/ArticleMode
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 // images (temporary)
-import img_article1 from '../../public/homepage/article1_big.png';
+//import img_article1 from '../../public/homepage/article1_big.png';
 
 
 //interface ArticleProps {}
@@ -31,7 +31,7 @@ import img_article1 from '../../public/homepage/article1_big.png';
 const Article:FC = () => {
   const router = useRouter();
   const articleName = router.query.articleName;
-  const [artData, setartData] = useState<ArticleFull>({linkname:'', headerText:'', blockList:[]});
+  const [artData, setartData] = useState<ArticleFull>({linkname:'', headerText:'', keywords:'', blockList:[]});
 
   const windim = useWindowDimensions();
   const [isDesktop, setisDesktop] = useState(false);
@@ -80,6 +80,16 @@ const Article:FC = () => {
 
   return (
   <div className={ce.rootWrapper}>
+    <Head>
+      <title>Айгуль Дейнекина | Статьи: {artData.headerText}</title>
+      <meta 
+        name="description"
+        content={`Айгуль Дейнекина | Статьи: ${artData.headerText}`}
+        key="desc"
+        />   
+      <meta name="keywords" content={artData.keywords}></meta>       
+    </Head>    
+
     <Menu isDesktop={isDesktop}/>
     <div className={ce.PageHeader2}></div>
 
@@ -97,7 +107,7 @@ const Article:FC = () => {
 
     <article className={ce.divPageW90}>
       { (artData.linkname === '') 
-        ? <>error 404 (custom component)</> 
+        ? <div className={ce.div_textQuote}>Интересующей Вас страницы не существует</div> 
         : <>
         <div>
           { artData.blockList.map( (item, index) => {

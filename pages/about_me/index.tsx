@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 // components
 import Menu from "../../components/Menu";
@@ -22,10 +23,6 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 
 const About:FC = () => {
-  useEffect( () => {
-    document.title = 'Психолог Айгуль Дейнекина: Обо мне';
-  }, [])
-
   const windim = useWindowDimensions();
   const [isDesktop, setisDesktop] = useState(false);
   const mobBP : number= +process.env.NEXT_PUBLIC_MOBILE_BREAKPOINT!;
@@ -42,6 +39,15 @@ const About:FC = () => {
 
   return (
     <div className={ce.rootWrapper}>
+      <Head>
+        <title>Психолог Айгуль Дейнекина - Обо мне</title>
+        <meta 
+          name="description"
+          content="Психолог Айгуль Дейнекина - Обо мне"
+          key="desc"
+          />        
+      </Head>
+
       <Menu isDesktop={isDesktop} />
       <div className={ce.PageHeader2}></div>
 
