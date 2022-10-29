@@ -1,6 +1,14 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
+import { useEffect } from 'react';
+
 export default function Document() {
+  const ym = +process.env.NEXT_PUBLIC_YMID;
+
+  useEffect( () => {
+    console.log('ym=', ym);
+  }, [ym])
+
   return (
     <Html>
       <Head></Head>
@@ -17,7 +25,7 @@ export default function Document() {
               k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
               (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
            
-              ym(90949488, "init", {
+              ym(${ym}, "init", {
                    clickmap:true,
                    trackLinks:true,
                    accurateTrackBounce:true
@@ -25,7 +33,7 @@ export default function Document() {
               `,
             }}
           />
-        <noscript><div><img src="https://mc.yandex.ru/watch/90949488" style={{position:'absolute', left:'-9999px'}} alt="" /></div></noscript>
+        <noscript><div><img src={`https://mc.yandex.ru/watch/${ym}`} style={{position:'absolute', left:'-9999px'}} alt="" /></div></noscript>
       </body>
     </Html>
   )

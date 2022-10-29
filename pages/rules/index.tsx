@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Image, { StaticImageData } from "next/image";
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
 // components
@@ -19,25 +18,10 @@ import imgStones from '../../public/pageRules/imgStones.png';
 // data
 import { data_rules } from '../../dataJson/rules';
 
-// hooks
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { PageProps } from "../../models/PageModel";
 
-const Rules:FC = () => {
-  const windim = useWindowDimensions();
-  const [isDesktop, setisDesktop] = useState(false);
-  const mobBP : number= +process.env.NEXT_PUBLIC_MOBILE_BREAKPOINT!;
-
-  useEffect( () => {
-    if (windim !== undefined) {
-      if (windim.width! >= mobBP ) {
-        setisDesktop(true);
-      } else {
-        setisDesktop(false)
-      }      
-    }
-  },[windim, mobBP])
-
-
+//
+const Rules:FC<PageProps> = (props) => {
   //
   return (
   <div className={ce.rootWrapper}>
@@ -50,12 +34,12 @@ const Rules:FC = () => {
         />        
     </Head>
 
-    <Menu isDesktop={isDesktop}/>
+    <Menu isDesktop={props.isDesktop}/>
     <div className={ce.PageHeader2}></div> 
       
     <div className={homeP.personInfo_wrapper}>
       <div className={homeP.personInfo}>
-        { isDesktop && <div className={ce.div_textQuote}>Договорённость заранее избавляет от недопонимания в дальнейшем </div> }
+        { props.isDesktop && <div className={ce.div_textQuote}>Договорённость заранее избавляет от недопонимания в дальнейшем </div> }
 
         <div className={homeP.homeAbout__text} style={{fontSize:'25px'}}>
           Мировая психотерапевтическая практика практическим путем вывела психотерапевтические правила работы. 
@@ -94,7 +78,7 @@ const Rules:FC = () => {
       </div>
     </div>
 
-    <Footer isDesktop={isDesktop}/>
+    <Footer isDesktop={props.isDesktop}/>
   </div>)
 }
 

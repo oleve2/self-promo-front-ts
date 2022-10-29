@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Image from "next/image";
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
 // components
@@ -18,25 +17,9 @@ import homeP from '../../styles/PageHome.module.scss';
 import portrAboutMe from '../../public/pageAboutMe/DSC01632 1.png';
 import imgMyAim from '../../public/pageAboutMe/DSC01855 1.png';
 
-// hooks
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { PageProps } from "../../models/PageModel";
 
-
-const About:FC = () => {
-  const windim = useWindowDimensions();
-  const [isDesktop, setisDesktop] = useState(false);
-  const mobBP : number= +process.env.NEXT_PUBLIC_MOBILE_BREAKPOINT!;
-
-  useEffect( () => {
-    if (windim !== undefined) {
-      if (windim.width! >= mobBP ) {
-        setisDesktop(true);
-      } else {
-        setisDesktop(false)
-      }
-    }
-  },[windim, mobBP])
-
+const About:FC<PageProps> = (props) => {
   return (
     <div className={ce.rootWrapper}>
       <Head>
@@ -48,10 +31,9 @@ const About:FC = () => {
           />        
       </Head>
 
-      <Menu isDesktop={isDesktop} />
+      <Menu isDesktop={props.isDesktop} />
       <div className={ce.PageHeader2}></div>
 
-      {/* */} 
       <div className={homeP.personInfo_wrapper}>
         <div className={homeP.img_portrait}>
           <Image src={portrAboutMe} alt="portrarait_aboutme"/>
@@ -102,14 +84,14 @@ const About:FC = () => {
             <Image src={imgMyAim} alt="imgMyAim"/> 
           </div>
         </div>
-      </div>          
+      </div>
  
       <div className={ce.divPage}>
         <h2 className={ce.title_h2}>Запись на консультацию</h2>
         <CommunicationForm />
       </div>
 
-      <Footer isDesktop={isDesktop}/>
+      <Footer isDesktop={props.isDesktop}/>
     </div>)
 }
 

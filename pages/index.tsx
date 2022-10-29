@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -28,26 +27,10 @@ import arrowLI from '../public/homepage/ArrowLI.png';
 import { data_consults } from '../dataJson/consults';
 import { data_articles } from '../dataJson/articles';
 
-// hooks
-import useWindowDimensions from '../hooks/useWindowDimensions';
 
+import { PageProps } from '../models/PageModel'; 
 
-const Home: NextPage = () => {
-  const windim = useWindowDimensions();
-  const [isDesktop, setisDesktop] = useState(false);
-  
-  const mobBP: Number = +process.env.NEXT_PUBLIC_MOBILE_BREAKPOINT!;
-  
-  useEffect( () => {
-    if (windim !== undefined) {
-      if (windim.width! >= mobBP) {
-        setisDesktop(true);
-      } else {
-        setisDesktop(false)
-      }
-    }
-  },[windim])
-
+const Home: NextPage<PageProps> = (props) => {
   const router = useRouter();
 
 
@@ -62,13 +45,13 @@ const Home: NextPage = () => {
           />        
       </Head>
 
-      <Menu isDesktop={isDesktop}/>
+      <Menu isDesktop={props.isDesktop}/>
       <div className={ce.PageHeader2}></div>
 
       
       <div className={homeP.personInfo_wrapper}>
         <div className={homeP.personInfo}>
-          { isDesktop && <div className={ce.div_textQuote}>Помогу изменить  жизнь</div> }
+          { props.isDesktop && <div className={ce.div_textQuote}>Помогу изменить  жизнь</div> }
 
           <div className={homeP.personInfo__name}>Айгуль</div>
 
@@ -76,7 +59,7 @@ const Home: NextPage = () => {
 
           <div className={homeP.personInfo__titles}>Психолог, Гештальт и ЕМДТ терапевт</div>
 
-          { isDesktop && <div className={ce.btnSignUp}>Записаться</div> }
+          { props.isDesktop && <div className={ce.btnSignUp}>Записаться</div> }
         </div>
         
         <div className={homeP.img_portrait}>
@@ -127,7 +110,7 @@ const Home: NextPage = () => {
           }) }
         </div>
 
-        { isDesktop && <div className={ce.backgrrelative}></div> }
+        { props.isDesktop && <div className={ce.backgrrelative}></div> }
       </div>
       
 
@@ -201,7 +184,7 @@ const Home: NextPage = () => {
           </div>
         </div>*/}
 
-        { isDesktop && <div className={ce.backgrrelative}></div> }
+        { props.isDesktop && <div className={ce.backgrrelative}></div> }
       </div>
 
 
@@ -219,8 +202,10 @@ const Home: NextPage = () => {
         <h2 className={ce.title_h2}>Запись на консультацию</h2>
         <CommunicationForm />
       </div>
-          
-      <Footer isDesktop={isDesktop} />  
+      
+      <div id="contacts">
+        <Footer isDesktop={props.isDesktop} />  
+      </div>
     </div>
   )
 }

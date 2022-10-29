@@ -19,47 +19,26 @@ import AF from "../../dataJson/articles_total";
 // types
 import { ArticleBlock, ArticleFull, PassageType } from "../../models/ArticleModels"; 
 
-// hooks
-import useWindowDimensions from "../../hooks/useWindowDimensions";
-
 // images (temporary)
 //import img_article1 from '../../public/homepage/article1_big.png';
 
 
-//interface ArticleProps {}
+import { PageProps } from "../../models/PageModel";
 
-const Article:FC = () => {
+const Article:FC<PageProps> = (props) => {
   const router = useRouter();
   const articleName = router.query.articleName;
   const [artData, setartData] = useState<ArticleFull>({linkname:'', headerText:'', keywords:'', blockList:[]});
 
-  const windim = useWindowDimensions();
-  const [isDesktop, setisDesktop] = useState(false);
-  const mobBP : number= +process.env.NEXT_PUBLIC_MOBILE_BREAKPOINT!;
-
   // page content
   useEffect( () => {
-    console.log(`articleName=${articleName}`);
     for (let i=0; i < AF.length; i++) {
-      console.log(AF[i].linkname);
       if (articleName === AF[i].linkname) {
         setartData(AF[i]);
-        console.log('found');
         break;
       }
     }
   }, [articleName])
-
-  // window size
-  useEffect( () => {
-    if (windim !== undefined) {
-      if (windim.width! >= mobBP ) { 
-        setisDesktop(true);
-      } else {
-        setisDesktop(false)
-      }
-    }
-  },[windim, mobBP])
 
   // construct page
   const constructTag = (item: ArticleBlock) => {
@@ -77,7 +56,7 @@ const Article:FC = () => {
     }                
   }
 
-
+  
   return (
   <div className={ce.rootWrapper}>
     <Head>
@@ -90,7 +69,7 @@ const Article:FC = () => {
       <meta name="keywords" content={artData.keywords}></meta>       
     </Head>    
 
-    <Menu isDesktop={isDesktop}/>
+    <Menu isDesktop={props.isDesktop}/>
     <div className={ce.PageHeader2}></div>
 
     <div className={homeP.personInfo_wrapper}>
@@ -120,7 +99,7 @@ const Article:FC = () => {
     
     <div style={{height:'150px'}}></div>  
 
-    <Footer isDesktop={isDesktop}/> 
+    <Footer isDesktop={props.isDesktop}/> 
   </div>)
 }
 

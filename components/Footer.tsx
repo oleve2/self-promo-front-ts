@@ -43,7 +43,7 @@ const Footer:FC<FooterProps> = (props) => {
       <div className={footer.footer__navlink}> <Link href='/articles'>Статьи</Link> </div>
       <div className={footer.footer__navlink}> <Link href='/#feedbacks'>Отзывы</Link> </div>
       <div className={footer.footer__navlink}> <Link href='/rules'>Правила работы</Link> </div>
-      <div className={footer.footer__navlink}> <Link href='/contacts'>Контакты</Link> </div>
+      <div className={footer.footer__navlink}> <Link href='/#contacts'>Контакты</Link> </div>
     </div>    
     }
 

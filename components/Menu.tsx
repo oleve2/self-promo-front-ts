@@ -7,13 +7,35 @@ import menu from './Menu.module.scss';
 // images
 import close_img from '../public/common/close.png';
 
+// interfaces (menu)
 interface MenuProps {
   LinksList?: string[],
   isDesktop: boolean,
 }
 
+interface MenuLinksType {
+  link: string,
+  name: String,
+}
+
+
+//
 const Menu:FC<MenuProps> = (props) => {
   const [menuOpened, setmenuOpened] = useState(false);
+
+  const clickBM = () => {
+    setmenuOpened(false);
+  }
+
+  const menuLinks: MenuLinksType[] = [
+    {link: '/', name: 'Главная'},
+    {link: '/about_me', name: 'Обо мне'},
+    {link: '/#consult_therapy', name: 'Консультация и терапия'},
+    {link: '/articles', name: 'Статьи'},
+    {link: '/#feedbacks', name: 'Отзывы'},
+    {link: '/rules', name: 'Правила работы'},
+    {link: '/#contacts', name: 'Контакты'},
+  ]
 
   return (
     <>
@@ -34,13 +56,9 @@ const Menu:FC<MenuProps> = (props) => {
               </div>
 
               <ul className={menu.burger_menuContent_ul}>
-                <li > <Link href='/'>Главная</Link> </li>
-                <li > <Link href='/about_me'>Обо мне</Link> </li>
-                <li > <Link href="/#consult_therapy" >Консультация и терапия</Link> </li>
-                <li > <Link href='/articles'>Статьи</Link> </li>
-                <li > <Link href='/#feedbacks'>Отзывы</Link> </li>
-                <li > <Link href='/rules'>Правила работы</Link> </li>
-                <li > <Link href='/contacts'>Контакты</Link> </li>
+                { menuLinks.map( (item, index) => {
+                  return <li key={index} onClick={() => {clickBM()}} > <Link href={item.link}>{item.name}</Link> </li>
+                }) } 
               </ul>
             </div>
           </div>
@@ -50,13 +68,11 @@ const Menu:FC<MenuProps> = (props) => {
       
       { props.isDesktop && 
       <ul className={menu.menu__ul}>
-        <li className={menu.menu__li}> <Link href='/'>Главная</Link> </li>
-        <li className={menu.menu__li}> <Link href='/about_me'>Обо мне</Link> </li>
-        <li className={menu.menu__li}> <Link href="/#consult_therapy" >Консультация и терапия</Link> </li>
-        <li className={menu.menu__li}> <Link href='/articles'>Статьи</Link> </li>
-        <li className={menu.menu__li}> <Link href='/#feedbacks'>Отзывы</Link> </li>
-        <li className={menu.menu__li}> <Link href='/rules'>Правила работы</Link> </li>
-        <li className={menu.menu__li}> <Link href='/contacts'>Контакты</Link> </li>
+        { menuLinks.map( (item, index) => {
+          return <li key={index} className={menu.menu__li} onClick={() => {clickBM()}}> 
+            <Link href={item.link}>{item.name}</Link> 
+          </li>
+        }) }
       </ul>
       }
       
