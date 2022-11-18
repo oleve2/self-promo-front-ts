@@ -14,14 +14,18 @@ import homeP from '../../styles/PageHome.module.scss';
 
 // images
 import imgStones from '../../public/pageRules/imgStones.png';
+import whiteSquare from '../../public/pageRules/whitesquare.png';
 
 // data
-import { data_rules } from '../../dataJson/rules';
+import { data_rules } from '../../dataJson/rulesRulespage';
 
-import { PageProps } from "../../models/PageModel";
+import { PageProps } from '../../models/PageModel';
+import { RulesType } from '../../models/RulesModel';
 
 //
 const Rules:FC<PageProps> = (props) => {
+  const ruleEmpty: RulesType = {id:-1, title:'', textArr:[], img: whiteSquare}
+
   //
   return (
   <div className={ce.rootWrapper}>
@@ -62,23 +66,20 @@ const Rules:FC<PageProps> = (props) => {
 
       <div className={rulesP.rules_divCenter}>
         <div className={rulesP.rules_annotation}>
-        Пожалуйста, прежде чем записаться на встречу, ознакомьтесь с правилами сотрудничества.
+          Пожалуйста, прежде чем записаться на встречу, ознакомьтесь с правилами сотрудничества.
         </div>
       </div>
       
       <div className={rulesP.rules_divCenter}>
       { data_rules.map( (item) => {
-        return <RulesCard key={item.id} 
-          id={item.id}
-          pic={item.img}
-          title={item.title} 
-          textArr={item.textArr}
-        />
+        return <RulesCard key={item.id} rule={item} isFakeBottom={false}/>
       }) }
+      
+      <RulesCard rule={ruleEmpty} isFakeBottom={true}/>
       </div>
     </div>
 
-    <Footer isDesktop={props.isDesktop}/>
+    <Footer isDesktop={props.isDesktop} backgroundColor="#E7F4FF"/>
   </div>)
 }
 

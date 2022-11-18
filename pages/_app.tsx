@@ -5,6 +5,8 @@ import type { AppProps } from 'next/app';
 import { useState, useEffect } from 'react';
 import useWindowDimensions from '../hooks/useWindowDimensions';
 
+import ScrollToTop from '../components/UI/ScrollToTop';
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   const windim = useWindowDimensions();
@@ -23,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   },[windim, mobBP])
 
   return (<>
+    <ScrollToTop />
     <Component {...pageProps} 
       isDesktop={isDesktop}
     />

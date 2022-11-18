@@ -16,14 +16,26 @@
 }
 
 .fdbks__sigleFbdk {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 663px;
-  height: fit-content;
-  min-height: 301px;
-  margin: 0 20px;
-  padding: 5px;
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: fit-content;
+    min-height: 350px;
+    padding: 10px;
+  }
+
+  @media screen and (min-width: $screen_desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 663px;
+    height: fit-content;
+    min-height: 301px;
+    margin: 0 20px;
+    padding: 5px;
+  }  
+
 }
 
 .fdbks__textblock {

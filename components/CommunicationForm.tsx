@@ -4,8 +4,8 @@ import { FC } from "react";
 import ce from '../styles/CommonElements.module.scss';
 import commf from './CommunicationForm.module.scss';
 
-const Communicationform:FC = (props) => {
 
+const Communicationform:FC = () => {
   return (<>
     <form className={commf.formdiv}>
       <div className={commf.formContentwrapper}>

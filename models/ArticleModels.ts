@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image"
 
 export enum PassageType {
   main_title = 'main_title',
@@ -7,20 +8,27 @@ export enum PassageType {
 }
 
 export interface ArticleFull {
-  linkname: String,
-  headerText: String,
+  linkname: string,
+  headerText: string,
   keywords: string, //| String[]
   blockList: ArticleBlock[]
 } 
 
 export interface ArticleBlock {
   type: PassageType,
-  text: String,
+  text: string,
 }
 
 export interface LinkListType {
-  link: String,
-  name: String,
+  link: string,
+  name: string,
 }
 
 
+export interface ArticleHomepage {
+  id: number,
+  img: StaticImageData,
+  title: string,
+  text: string[],
+  articlePageLink: string,
+}

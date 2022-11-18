@@ -10,11 +10,12 @@ import ConsultCardSt from './ConsultCard.module.scss';
 
 interface ConsultCardProps {
   img: StaticImageData,
-  title?: String,
-  aim?: String,
-  duration?: String,
-  online_offline?: String,
-  price?: String,
+  title?: string,
+  aim?: string,
+  duration?: string,
+  online_offline?: string,
+  price?: string,
+  isdesktop: boolean,
 }
 
 const ConsultCard:FC<ConsultCardProps> = (props) => {
@@ -37,7 +38,7 @@ const ConsultCard:FC<ConsultCardProps> = (props) => {
       <div>Стоимость консультации {props.price}.</div>      
     </div>
 
-    <div className={ce.btnSignUp}>Записаться</div>
+    <div className={ce.btnSignUp + " " + (!props.isdesktop ? ConsultCardSt.btn_width100 : '')}>Записаться</div>
   </div>  
   )
 }

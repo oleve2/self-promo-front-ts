@@ -69,7 +69,7 @@ const About:FC<PageProps> = (props) => {
       <div className={ce.divPage} style={{backgroundColor:'#EEF7FF'}}>
         <h2 className={ce.title_h2}>Квалификации</h2>
 
-        <DiplomCards />
+        <DiplomCards isDesktop={props.isDesktop}/>
       </div>
 
       <div className={aboutP.divPageFitCont}>

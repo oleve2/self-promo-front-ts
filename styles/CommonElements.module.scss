@@ -51,7 +51,7 @@
   text-align: right;
 }
 
-.btnSignUp {
+.btnSignUp, .btnSignUp a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,6 +67,7 @@
   letter-spacing: 0.1em;
   text-align: center;
 
+  text-decoration: none;
   
 }
 
@@ -133,7 +134,7 @@
 }
 
 /* <a> link with error style and pseudo */  
-.linkWithArrow {
+.linkWithArrow, .linkWithArrow a {
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
@@ -142,6 +143,7 @@
   text-align: left;
   
   color: #458880;
+  text-decoration: none;
 }
 
 .linkWithArrow:after {
@@ -164,4 +166,6 @@
   margin-bottom: -500px;
 }
 
-
+.div__bgBlue {
+  background-color: $backgr-color;
+}

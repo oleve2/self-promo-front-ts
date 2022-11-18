@@ -4,11 +4,15 @@ import article2 from '../public/homepage/article2.png';
 import article3 from '../public/homepage/article3.png';
 import article4 from '../public/homepage/article4.png';
 
+import { ArticleHomepage } from '../models/ArticleModels';
 
-export const data_articles = [
+
+export const data_articles: ArticleHomepage[] = [
   {
+    id: 0,
     img: article1,
     title: 'Прокрастинация',
+    articlePageLink: '/articles/procrastination',
     text: [
       `Почему я не занимаюсь спортом? Почему не ищу лучшую работу? Почему не читаю книги?`,
       `Почему купила курс по скорочтению и не прохожу его?`,
@@ -16,8 +20,10 @@ export const data_articles = [
     ] 
   },
   {
+    id: 1,
     img: article2,
     title: 'Страх отвержения в профессии',
+    articlePageLink: '#',
     text: [
       `В личной терапии такие запросы звучат, как:`,
       `- я боюсь начать что-то делать (идти на собеседование, написать пост в инстаграме, запустить проект);`,
@@ -26,16 +32,20 @@ export const data_articles = [
     ],
   },
   {
+    id: 2,
     img: article3,
     title: 'Неуверенность в себе',
+    articlePageLink: '#',
     text: [
       `Это состояние сомнения в себе, своих силах, парализующий страх, сопротивление начинать новое, пробовать, страх проявляться и быть видимым.`,
       `Состояние тревоги и беспокойства перед чем-то новым — это нормальное состояние.`,
     ]
   },
   {
+    id: 3,
     img: article4,
     title: 'Ответственость',
+    articlePageLink: '#',
     text: [
       `Иногда нам страшно становиться взрослыми, потому что:`,
       `- рано пришлось повзрослеть и это было слишком тяжело;`,

@@ -1,13 +1,13 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 
 export default function Document() {
   const ym = +process.env.NEXT_PUBLIC_YMID;
 
-  useEffect( () => {
+  /*useEffect( () => {
     console.log('ym=', ym);
-  }, [ym])
+  }, [ym])*/
 
   return (
     <Html>

@@ -19,8 +19,6 @@ import AF from "../../dataJson/articles_total";
 // types
 import { ArticleBlock, ArticleFull, PassageType } from "../../models/ArticleModels"; 
 
-// images (temporary)
-//import img_article1 from '../../public/homepage/article1_big.png';
 
 
 import { PageProps } from "../../models/PageModel";
@@ -99,7 +97,7 @@ const Article:FC<PageProps> = (props) => {
     
     <div style={{height:'150px'}}></div>  
 
-    <Footer isDesktop={props.isDesktop}/> 
+    <Footer isDesktop={props.isDesktop} backgroundColor="#E7F4FF"/> 
   </div>)
 }
 

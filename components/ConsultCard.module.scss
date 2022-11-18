@@ -12,7 +12,9 @@
     min-width: 60%;
     min-height: 500px;
     padding: 10px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    max-width: 70%;
+    margin: 0 auto;    
   }
   @media screen and (min-width: $screen_desktop) {
     display: flex;
@@ -73,7 +75,9 @@
   text-align: center;
 }
 
-
+.btn_width100 {
+  width: 100%;
+}
 
 
 

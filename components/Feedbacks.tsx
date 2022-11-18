@@ -8,6 +8,8 @@ import arrToRight from '../public/homepage/arrToRight.png';
 import img_fdbck from '../public/common/feedback.png';
 import img_fdbck_active from '../public/common/feedback_active.png';
 
+// components
+import FeedbackCard from "../components/FeedbackCard"
 
 // styles
 import ce from '../styles/CommonElements.module.scss';
@@ -56,20 +58,7 @@ const Feedbacks:FC = (props) => {
       </div>
       
       {/* компонент отзыва */}
-      <div className={fdbks.fdbks__sigleFbdk}>
-        <div className={fdbks.fdbks__textblock}> 
-          <span className={fdbks.fdbks__bold}>{feedbackActive.name}</span>, {feedbackActive.feedback_to}
-        </div>
-        
-        { feedbackActive.fdbck.map( (item, index) => {
-          return <div key={index} className={fdbks.fdbks__textblock}>{item}</div>
-        }) }
-
-        <div style={{display:'flex'}}>
-          <div className={fdbks.fdbks__date}>{feedbackActive.feedback_date}</div>
-          {/*<div className="fdbks__stars">звезды</div>*/}
-        </div>
-      </div>  
+      <FeedbackCard feedbackActive={feedbackActive} />
       
       {/* стрелка вправо */}
       <div onClick={() => { changeANPlus() }}>

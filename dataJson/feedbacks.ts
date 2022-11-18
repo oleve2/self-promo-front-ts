@@ -1,5 +1,8 @@
 
-export const data_feedbacks = [
+import { FeedbackType } from "../models/FeedbackModels"
+
+
+export const data_feedbacks: FeedbackType[] = [
   {
     name: 'Дарья Житникова',
     feedback_to: 'тренинг ЕМДР',

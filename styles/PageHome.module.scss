@@ -172,13 +172,12 @@
   @media screen and (max-width: $screen_mobile) {
     margin-bottom: 20px;
   }
-
 }
 
 /* Article section ----------------- */
 .homeArticles__wrapper {
-  @media screen and (max-width: $screen_mobile) { /*  */
-    display: flex;
+  @media screen and (max-width: $screen_mobile) {   
+    display: flex; 
     flex-direction: column;
     align-items: center;
     width: fit-content;
@@ -186,13 +185,13 @@
     margin-right: auto;  
   }
 
-  @media screen and (min-width: $screen_desktop) { /*  */
+  @media screen and (min-width: $screen_desktop) {
     display: flex;
     align-items: center;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;   
-  }
+  }  
 }
 
 .homeArticles__arrowWrapper {
