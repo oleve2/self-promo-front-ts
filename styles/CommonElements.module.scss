@@ -38,7 +38,6 @@
     text-align: left;
     color: #436A8B;
   }  
-
 }
 
 .div_textQuoteAuthor {
@@ -68,8 +67,11 @@
   text-align: center;
 
   text-decoration: none;
-  
 }
+.btnSignUp:hover, .btnSignUp a:hover {
+  background-color: $color_hover;
+}
+
 
 /* main containers (old)---------------------------------------- */
 %divPage_template {
@@ -141,11 +143,13 @@
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
-  
   color: #458880;
   text-decoration: none;
 }
-
+.linkWithArrow__text:hover {
+  background-color: $color_hover;
+  color: white;
+}
 .linkWithArrow:after {
   content: '';
   background-image: url('../public/common/arrow16.png');
@@ -155,6 +159,8 @@
   height: 5px;
   margin-top: 10px;
 }
+
+
 
 /* blue background block */
 .backgrrelative {

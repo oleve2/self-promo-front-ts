@@ -188,7 +188,7 @@ const Home: NextPage<PageProps> = (props) => {
             </div>
 
             <div className={ce.linkWithArrow} onClick={() => { router.push('/about_me') }}>
-              Больше информации
+              <span className={ce.linkWithArrow__text}>Больше информации</span>
             </div>
           </div>
         </div>

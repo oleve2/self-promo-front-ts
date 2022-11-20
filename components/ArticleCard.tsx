@@ -29,7 +29,9 @@ const ArticleCard:FC<ArticleCardProps> = (props) => {
     </div>
 
     <div className={ce.linkWithArrow}>
-      <Link href={props.data.articlePageLink}>Читать дальше</Link> 
+      <Link href={props.data.articlePageLink}>
+        <span className={ce.linkWithArrow__text}>Читать дальше</span>
+      </Link> 
     </div>
   </div>
   )

@@ -56,17 +56,17 @@ const Footer:FC<FooterProps> = (props) => {
     </div>    
     }
 
-    { props.isDesktop &&  
+    {/* props.isDesktop &&  */}
     <div className={footer.footer_block}>
       <div className={footer.footer__otherLinks}>
-        <a href="https://yandex.ru/maps/213/moscow/house/zubovskiy_bulvar_vl13s1/Z04Ycw5iSkUEQFtvfXtydHtiZw==/?ll=37.592302%2C55.735713&z=17.08">Яндекс. Карты</a>
+        <a href="https://yandex.ru/maps/213/moscow/house/zubovskiy_bulvar_vl13s1/Z04Ycw5iSkUEQFtvfXtydHtiZw==/?ll=37.592302%2C55.735713&z=17.08">Яндекс.Карты</a>
       </div>
       <div className={footer.footer__otherLinks}>
         <a href="https://www.google.com/maps/place/%D0%97%D1%83%D0%B1%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%B1-%D1%80,+13%D1%811,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119021/@55.7357333,37.5903453,17z/data=!4m5!3m4!1s0x46b54ba67013d95b:0xac419fe738f5cdb2!8m2!3d55.7357696!4d37.5921799">Google Maps</a>
       </div>
       <div className={footer.footer__disclaimer}>Все данные на сайте имеют ознакомительный характер и могут быть скорректированы автором в процессе.</div>
     </div>    
-    }
+    
 
   </div>
   </>)

@@ -47,10 +47,6 @@ const Articles:FC<PageProps> = (props) => {
       <div className={homeP.personInfo}>
         <div className={ce.div_textQuote}>Статьи</div>
       </div>
-
-      {/*<div className={homeP.img_portrait}>
-        <Image src={img_article1} alt="portrait_home"/> 
-      </div>*/}
     </div>
 
     <div style={{height:'150px'}}></div>      
@@ -58,8 +54,10 @@ const Articles:FC<PageProps> = (props) => {
     <div className={ce.divPageW90}>
       <ul style={{padding:'0', listStyleType:'none'}}>
         { links.map( (item, index) => {
-          return <li key={index} style={{marginBottom:'10px'}}>
-            <Link href={item.link}>{item.name}</Link>
+          return <li key={index} style={{marginBottom:'10px'}} className={ce.linkWithArrow}>
+            <Link href={item.link}>
+              <span className="CommonElements_linkWithArrow__text__94SUA">{item.name}</span>
+            </Link>
           </li> 
         }) }
       </ul>
