@@ -14,7 +14,7 @@ import homeP from '../../styles/PageHome.module.scss';
 import artN from '../../styles/PageArticleNames.module.scss';
 
 // articles data
-import AF from "../../dataJson/articles_total";
+import { AF } from "../../dataJson/articles_total";
 
 // types
 import { ArticleBlock, ArticleFull, PassageType } from "../../models/ArticleModels"; 
@@ -26,7 +26,15 @@ import { PageProps } from "../../models/PageModel";
 const Article:FC<PageProps> = (props) => {
   const router = useRouter();
   const articleName = router.query.articleName;
-  const [artData, setartData] = useState<ArticleFull>({linkname:'', headerText:'', keywords:'', blockList:[]});
+  const [artData, setartData] = useState<ArticleFull>({
+    linkname:'', 
+    linkFull: '',
+    mainImage: '',
+    summary: [],
+    headerText:'', 
+    keywords:'', 
+    blockList:[]
+  });
 
   // page content
   useEffect( () => {
@@ -52,9 +60,12 @@ const Article:FC<PageProps> = (props) => {
     if (item.type === PassageType.text_bold) {
       return <div className={artN.articleName_text_bold}>{item.text}</div>
     }                
+    if (item.type === PassageType.image) {
+      return <Image src={item.image!}></Image>
+    }
   }
 
-  
+  //
   return (
   <div className={ce.rootWrapper}>
     <Head>
@@ -74,10 +85,14 @@ const Article:FC<PageProps> = (props) => {
       <div className={homeP.personInfo}>
         <div className={ce.div_textQuote}>{artData.headerText}</div>
       </div>
-
-      {/*<div className={homeP.img_portrait}>
-        <Image src={img_article1} alt="portrait_home"/> 
-      </div>*/}
+      {/**/}
+      { (artData.mainImage !== '') 
+      ? <div className={homeP.img_portrait}>
+          <Image src={artData.mainImage} alt="article_main"/> 
+        </div>
+      : <></>
+      }
+      
     </div>
 
     <div style={{height:'150px'}}></div>  

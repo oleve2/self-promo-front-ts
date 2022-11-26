@@ -54,13 +54,15 @@ const Home: NextPage<PageProps> = (props) => {
     setfeedbackNumActive(num);
     setfeedbackActive(data_feedbacks[num]);
   }
+
+  // type of consulttion booked
+  const [consultType, setconsultType] = useState('');
+
   // ---------------------------------------------
 
   //
   return (
     <div className={ce.rootWrapper}>
-      
-
       <Head>
         <title>Психолог Айгуль Дейнекина, Москва, EDMR, Психологические консультации</title>
         <meta 
@@ -135,6 +137,7 @@ const Home: NextPage<PageProps> = (props) => {
               online_offline={item.online_offline}
               price={item.price}
               isdesktop={props.isDesktop}
+              funcSetconsultType={setconsultType}
             />
           }) }
         </div>
@@ -197,12 +200,13 @@ const Home: NextPage<PageProps> = (props) => {
       <div className={ce.divPage}>
         <h2 className={ce.title_h2}>Статьи</h2>
         
-        { props.isDesktop && 
+        { props.isDesktop && <>
           <div className={homeP.homeArticles__wrapper}>
             { data_articles.map( (item) => {
             return <ArticleCard key={item.id} data={item} />
             }) }
-          </div>        
+          </div>
+          </>
         }
 
         { !props.isDesktop && 
@@ -216,6 +220,12 @@ const Home: NextPage<PageProps> = (props) => {
           </MobileSlider>        
         </div>
         }
+
+        <div style={{display:'flex', justifyContent:'center', margin:'20px auto'}}>
+          <div className={ce.btnSignUp}>
+            <Link href="/articles">Больше статей</Link>
+          </div>            
+        </div>
 
         { <div className={ce.backgrrelative}></div> } 
       </div>
@@ -243,12 +253,14 @@ const Home: NextPage<PageProps> = (props) => {
           />
           </MobileSlider> 
         }
-
       </div>
         
       <div className={ce.divPage}>
         <h2 className={ce.title_h2} id="book_consultation">Запись на консультацию</h2>
-        <CommunicationForm />
+
+        <CommunicationForm 
+          consType={consultType}
+        />
       </div>
       
       <div id="contacts">

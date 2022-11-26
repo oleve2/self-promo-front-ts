@@ -1,10 +1,16 @@
 import { ArticleFull, PassageType } from "../models/ArticleModels";
 
+// images
+import article_phobia_main from '../public/pageArticles/article_phobia_main.png';
+
 /* Ключевые слова: фобия, невротический страх, социальная фобия, специфическая фобия, агорафобия. */
 
 const ArticlePhobia: ArticleFull = {
   linkname: 'phobia',
+  linkFull: '/articles/phobia',
   headerText: 'Фобия',
+  summary: [],
+  mainImage: article_phobia_main,
   keywords: 'фобия, невротический страх, социальная фобия, специфическая фобия, агорафобия',
   blockList: [
     {type: PassageType.main_title, text: `ФОБИЯ`},

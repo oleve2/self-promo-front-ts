@@ -5,23 +5,29 @@ export enum PassageType {
   text = 'text',
   text_bold = 'text_bold', 
   header = 'text_header',
+  image = 'image',
 }
 
 export interface ArticleFull {
   linkname: string,
+  linkFull: string,
   headerText: string,
-  keywords: string, //| String[]
+  summary?: string[],
+  keywords: string, 
+  mainImage: StaticImageData | string,
   blockList: ArticleBlock[]
 } 
 
 export interface ArticleBlock {
   type: PassageType,
   text: string,
+  image?: StaticImageData,
 }
 
 export interface LinkListType {
   link: string,
   name: string,
+  img: StaticImageData,
 }
 
 

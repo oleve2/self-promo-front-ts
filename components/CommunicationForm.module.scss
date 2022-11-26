@@ -7,12 +7,15 @@
   align-items: center;
   justify-content: center;
   
-  height: 700px;
   background: url('../public/common/backgr_bookConsult.png') no-repeat center center;
   background-size: auto 100%;
 
   @media screen and (max-width: $screen_mobile) {
     padding: 0 20px;
+    height: fit-content
+  }
+  @media screen and (min-width: $screen_desktop) {
+    height: 800px;
   }
 }
 
@@ -86,4 +89,22 @@
     width: 100%;
     margin-top: 20px;
   }
+}
+
+.commform__errordiv {
+  display: block;
+  /*flex-direction: column;*/
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+.commform__errorclose {
+  width: 20px;
+  height: 20px;
+  width: 20px;
+  height: 20px;
+  left: 96%;
+  position: relative;
+  top: 5px;  
 }
