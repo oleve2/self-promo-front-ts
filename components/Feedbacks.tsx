@@ -66,9 +66,9 @@ const Feedbacks:FC = (props) => {
       </div>              
     </div>
     
-    <div style={{display:'flex', maxWidth:'663px', justifyContent:'flex-start', marginTop:'20px'}}>
+    {/*<div style={{display:'flex', maxWidth:'663px', justifyContent:'flex-start', marginTop:'20px'}}>
       <div className={ce.linkWithArrow}>оставить отзыв</div>
-    </div>
+    </div>*/}
     
     <div style={{display:'flex', flexDirection:'column', justifyContent:'center', marginTop:'20px'}}>
       {/*<div>слайдер крутилки {JSON.stringify(activeNum)}</div>*/}
@@ -77,7 +77,6 @@ const Feedbacks:FC = (props) => {
           return <div key={item} style={{marginRight:'10px'}}>
             <Image src={(item === activeNum) ? img_fdbck_active : img_fdbck} alt="fbd_num"></Image> 
           </div>
-          
         })  }
       </div>
     </div>

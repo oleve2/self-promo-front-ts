@@ -52,7 +52,7 @@ const Articles:FC<PageProps> = (props) => {
               <Image src={item.mainImage!} alt="img"></Image>
             </div>
             
-            <div>
+            <div className={artP.articleName_text}>
               {item.summary}
             </div>
 
