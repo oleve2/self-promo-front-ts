@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Head from 'next/head';
 
 // components
@@ -45,10 +45,10 @@ const Rules:FC<PageProps> = (props) => {
       <div className={homeP.personInfo}>
         { props.isDesktop && <div className={ce.div_textQuote}>Договорённость заранее избавляет от недопонимания в дальнейшем </div> }
 
-        <div className={homeP.homeAbout__text} style={{fontSize:'25px'}}>
+        <div className={rulesP.rules__textHeader}>
           Мировая психотерапевтическая практика практическим путем вывела психотерапевтические правила работы. 
         </div>
-        <div className={homeP.homeAbout__text} style={{fontSize:'25px'}}>
+        <div className={rulesP.rules__textHeader}>
           Цель —  создание безопасных и ясных условий совместной работы.
         </div>
       </div>
@@ -66,7 +66,7 @@ const Rules:FC<PageProps> = (props) => {
 
       <div className={rulesP.rules_divCenter}>
         <div className={rulesP.rules_annotation}>
-          Пожалуйста, прежде чем записаться на встречу, ознакомьтесь с правилами сотрудничества.
+        Пожалуйста, прежде чем записаться на встречу, ознакомьтесь с правилами сотрудничества. Ознакомившись с правилами и продолжая посещать психотерапевта, вы тем самым соглашаетесь с ними.
         </div>
       </div>
       

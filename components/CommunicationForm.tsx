@@ -26,29 +26,43 @@ const Communicationform:FC<CommunicationFormProps> = (props) => {
   
   const [checkResult, setcheckResult] = useState<CheckResult | undefined>(undefined);
 
+  const errorMsg: string = "Произошла ошибка при отправке письма! Попробуйте позже!";
+
   // async check data (returns status)
   const validatedata = async () => {
     let formdata = {name: formName, email_phone: formMailPhone};
     //console.log('formdata', formdata);
-    let resp = await fetch(backUrl + '/api/v1/check_name_emailphone', {
-      method: 'POST',
-      headers: {"Authorization": backToken},
-      body: JSON.stringify(formdata),
-    })
-    let respData: CheckResult = await resp.json();
-    //console.log('respData', respData);
-    setcheckResult(respData);
-    //
-    return respData.name_check && (respData.email_check || respData.phone_check) && (formRequest.length > 5);
+
+    try {
+      let resp = await fetch(backUrl + '/api/v1/check_name_emailphone', {
+        method: 'POST',
+        headers: {"Authorization": backToken},
+        body: JSON.stringify(formdata),
+      })
+      let respData: CheckResult = await resp.json();
+      //console.log('respData', respData);
+      setcheckResult(respData);
+      //
+      return respData.name_check && (respData.email_check || respData.phone_check) && (formRequest.length > 5);      
+    } catch (e) {
+      alert(errorMsg);
+      return false;
+    }   
   }
 
   // async send email
   const sendEmail = async () => {
     // sending email
-    let isReady = await validatedata();
-    //console.log(isReady);
+    let isReady: boolean = false;
+    try {    
+      isReady = await validatedata();
+      //console.log(isReady);
+    } catch (e) {
+      alert('Ошибка сервера при валидации формы');
+    } 
 
-    if (isReady) {
+    // ---------------------
+    if (isReady === true) {
       //console.log('sending email');
       let newCR = {
         name: formName,
@@ -59,23 +73,29 @@ Email/телефон: ${formMailPhone}
 Обращение: ${formRequest}`,
       };
       //console.log(newCR);
-      let respEmail = await fetch(backUrl + '/api/v1/send_email', {
-        method: 'POST',
-        headers: {"Authorization": backToken},
-        body: JSON.stringify(newCR),        
-      })
-      //console.log(respEmail.status);
 
-      if (respEmail.status !== 200) {
-        alert('Произошла ошибка при отправке письма! Попробуйте позже!')
-      } else {
-        // clear form
-        setformName('');
-        setformMailPhone('');
-        setformRequest('');
-      }
+      try {    
+        let respEmail = await fetch(backUrl + '/api/v1/send_email', {
+          method: 'POST',
+          headers: {"Authorization": backToken},
+          body: JSON.stringify(newCR),        
+        })
+        //console.log(respEmail.status);
+  
+        if (respEmail.status !== 200) {
+          alert(errorMsg);
+        } else {
+          // clear form
+          setformName('');
+          setformMailPhone('');
+          setformRequest('');
+        }
+      } catch (e) {
+        alert(errorMsg);
+      } 
+
     } else {
-      //console.log('');
+      alert('Некорректные данные для отправки письма!');
     }
   }
 

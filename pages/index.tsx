@@ -84,7 +84,7 @@ const Home: NextPage<PageProps> = (props) => {
 
           <div className={homeP.personInfo__name}>Дейнекина</div>
 
-          <div className={homeP.personInfo__titles}>Психолог, Гештальт и ЕМДТ терапевт</div>
+          <div className={homeP.personInfo__titles}>Психолог, Гештальт и ЕМДР терапевт</div>
 
           { props.isDesktop && 
             <div className={ce.btnSignUp}>
