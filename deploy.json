@@ -1,0 +1,9 @@
+{
+  "apps" : [{
+    "name" : "self-promo-front-ts",
+    "script" : "./node_modules/next/dist/bin/next",
+    "env":{
+      "PORT": "4044"
+    }
+  }]
+}
