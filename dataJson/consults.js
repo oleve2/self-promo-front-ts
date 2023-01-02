@@ -1,7 +1,7 @@
 
-import conscard1 from '../public/homepage/thercons1.png';
-import conscard2 from '../public/homepage/thercons2.png';
-import conscard3 from '../public/homepage/thercons3.png';
+import conscard1 from '../public/homepage/thercons1.webp';
+import conscard2 from '../public/homepage/thercons2.webp';
+import conscard3 from '../public/homepage/thercons3.webp';
 
 export const data_consults = [
  {

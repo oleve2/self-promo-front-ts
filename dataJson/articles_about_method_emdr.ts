@@ -2,9 +2,9 @@
 import { ArticleFull, PassageType } from "../models/ArticleModels";
 
 // images
-import article_aboutEMDR_main from '../public/pageArticles/article_aboutEMDR_main.png';
-import article_aboutEMDR_pic1 from '../public/pageArticles/article_aboutEMDR_pic1.png';
-import article_aboutEMDR_pic2 from '../public/pageArticles/article_aboutEMDR_pic2.png';
+import article_aboutEMDR_main from '../public/pageArticles/article_aboutEMDR_main.webp';
+import article_aboutEMDR_pic1 from '../public/pageArticles/article_aboutEMDR_pic1.webp';
+import article_aboutEMDR_pic2 from '../public/pageArticles/article_aboutEMDR_pic2.webp';
 
 /* Ключевые слова: ЕМДР, ДПДГ, переработка движением глаз, психологическая травма, дисфункциональное воспоминание, паттерн, флэшбек, триггер, воронка травмы. */
 

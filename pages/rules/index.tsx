@@ -13,7 +13,7 @@ import rulesP from '../../styles/PageRules.module.scss';
 import homeP from '../../styles/PageHome.module.scss';
 
 // images
-import imgStones from '../../public/pageRules/imgStones.png';
+import imgStones from '../../public/pageRules/imgStones.webp';
 import whiteSquare from '../../public/pageRules/whitesquare.png';
 
 // data

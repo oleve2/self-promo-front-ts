@@ -1,14 +1,14 @@
 
 // images
-import ndip1 from '../public/pageAboutMe/ndip1.png';
-import ndip2 from '../public/pageAboutMe/ndip2.png';
-import ndip3 from '../public/pageAboutMe/ndip3.png';
-import ndip4 from '../public/pageAboutMe/ndip4.png';
+import ndip1 from '../public/pageAboutMe/ndip1.webp';
+import ndip2 from '../public/pageAboutMe/ndip2.webp';
+import ndip3 from '../public/pageAboutMe/ndip3.webp';
+import ndip4 from '../public/pageAboutMe/ndip4.webp';
 
-import cert1 from '../public/pageAboutMe/cert1.png';
-import cert2 from '../public/pageAboutMe/cert2.png';
-import cert3 from '../public/pageAboutMe/cert3.png';
-import cert4 from '../public/pageAboutMe/cert4.png';
+import cert1 from '../public/pageAboutMe/cert1.webp';
+import cert2 from '../public/pageAboutMe/cert2.webp';
+import cert3 from '../public/pageAboutMe/cert3.webp';
+import cert4 from '../public/pageAboutMe/cert4.webp';
 
 export const data_diplomas = [
   {

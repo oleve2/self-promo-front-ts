@@ -2,8 +2,8 @@
 import { ArticleFull, PassageType } from "../models/ArticleModels";
 
 // images
-import article_lack_of_self_esteem_main from '../public/pageArticles/article_lack_of_self_esteem_main.png';
-import article_lack_of_self_esteem_pic1 from '../public/pageArticles/article_lack_of_self_esteem_pic1.png';
+import article_lack_of_self_esteem_main from '../public/pageArticles/article_lack_of_self_esteem_main.webp';
+import article_lack_of_self_esteem_pic1 from '../public/pageArticles/article_lack_of_self_esteem_pic1.webp';
 
 const ArticleLackOfSelfEsteem: ArticleFull = {
   linkname: 'lack_of_self_esteem',

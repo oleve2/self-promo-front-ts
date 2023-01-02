@@ -21,8 +21,8 @@ import ce from '../styles/CommonElements.module.scss';
 import homeP from '../styles/PageHome.module.scss';
 
 // images
-import portraitMain2 from '../public/homepage/DSC01634 copy 1.png';
-import portraitAboutMe from '../public/homepage/DSC01782 copy 1.png';
+import portraitMain2 from '../public/homepage/DSC01634 copy 1.webp';
+import portraitAboutMe from '../public/homepage/DSC01782 copy 1.webp';
 import arrowLI from '../public/homepage/ArrowLI.png';
 
 // data
@@ -100,10 +100,12 @@ const Home: NextPage<PageProps> = (props) => {
       
       <div style={{height:'150px'}}></div>
   
-      
-      <div className={ce.divPageH70 + " " + ce.div__bgBlue}>
+      <div style={{position:'relative'}}> 
         <div className={ce.title_h2}>Я могу помочь:</div>
-        
+      </div>
+
+      <div className={ce.divPageH70 + " " + ce.div__bgBlue}>
+
         <ul className={homeP.help_ul}>
           <li className={homeP.help_li}>
             <div className={homeP.help_imgwrapper}> <Image src={arrowLI} alt="li"></Image> </div>

@@ -1,9 +1,9 @@
 import { ArticleFull, PassageType } from "../models/ArticleModels";
 
 // images
-import article_phobia_main from '../public/pageArticles/article_phobia_main.png';
-import article_phobia_pic1 from '../public/pageArticles/article_phobia_pic1.png';
-import article_phobia_pic2 from '../public/pageArticles/article_phobia_pic2.png';
+import article_phobia_main from '../public/pageArticles/article_phobia_main.webp';
+import article_phobia_pic1 from '../public/pageArticles/article_phobia_pic1.webp';
+import article_phobia_pic2 from '../public/pageArticles/article_phobia_pic2.webp';
 
 /* Ключевые слова: фобия, невротический страх, социальная фобия, специфическая фобия, агорафобия. */
 

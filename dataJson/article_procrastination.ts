@@ -2,9 +2,9 @@
 import { ArticleFull, PassageType } from "../models/ArticleModels";
 
 // images
-import article_procrastination_main from '../public/pageArticles/article_procrastination_main.png';
-import article_procrastination_pic1 from '../public/pageArticles/article_procrastination_pic1.png';
-import article_procrastination_pic2 from '../public/pageArticles/article_procrastination_pic2.png';
+import article_procrastination_main from '../public/pageArticles/article_procrastination_main.webp';
+import article_procrastination_pic1 from '../public/pageArticles/article_procrastination_pic1.webp';
+import article_procrastination_pic2 from '../public/pageArticles/article_procrastination_pic2.webp';
 
 /* `Ключевые слова: прокрастинация, лень, сопротивление, перфекционизм, комплекс самозванца, тревожность.` */
 

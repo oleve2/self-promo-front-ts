@@ -14,8 +14,8 @@ import aboutP from '../../styles/PageAboutMe.module.scss';
 import homeP from '../../styles/PageHome.module.scss';
 
 // images
-import portrAboutMe from '../../public/pageAboutMe/DSC01632 1.png';
-import imgMyAim from '../../public/pageAboutMe/DSC01855 1.png';
+import portrAboutMe from '../../public/pageAboutMe/DSC01632 1.webp';
+import imgMyAim from '../../public/pageAboutMe/DSC01855 1.webp';
 
 import { PageProps } from "../../models/PageModel";
 
@@ -66,15 +66,19 @@ const About:FC<PageProps> = (props) => {
         <div className={ce.div_textQuote}>Грамм собственного опыта стоит дороже тонны чужих наставлений!</div>
       </div>
 
-      <div className={ce.divPage} style={{backgroundColor:'#EEF7FF'}}>
+      <div style={{position:'relative'}}>
         <h2 className={ce.title_h2}>Квалификации</h2>
+      </div>
 
+      <div className={ce.divPage} style={{backgroundColor:'#EEF7FF', marginTop:'20px', padding:'10px'}}>
         <DiplomCards isDesktop={props.isDesktop}/>
       </div>
 
-      <div className={aboutP.divPageFitCont}>
+      <div style={{position:'relative'}}>
         <h2 className={ce.title_h2}></h2>
+      </div>
 
+      <div className={aboutP.divPageFitCont}>
         <div className={aboutP.disclaimer_wrapper}>
           <div style={{margin:'0 20px'}}>
             <div className={ce.div_textQuote}>Цель моей работы — сопровождать на пути к самореализации, свободе,  внутренней ясности</div>

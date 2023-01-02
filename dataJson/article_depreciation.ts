@@ -1,9 +1,9 @@
 import { ArticleFull, PassageType } from "../models/ArticleModels";
 
 // images
-import article_deprecation_main from '../public/pageArticles/article_deprecation_main.png';
-import article_deprecation_pic1 from '../public/pageArticles/article_deprecation_pic1.png';
-import article_deprecation_pic2 from '../public/pageArticles/article_deprecation_pic2.png';
+import article_deprecation_main from '../public/pageArticles/article_deprecation_main.webp';
+import article_deprecation_pic1 from '../public/pageArticles/article_deprecation_pic1.webp';
+import article_deprecation_pic2 from '../public/pageArticles/article_deprecation_pic2.webp';
 
 
 
