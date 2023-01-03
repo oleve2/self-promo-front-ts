@@ -2,10 +2,17 @@ import { FC } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import dynamic from 'next/dynamic';
 
 // components
+/*
 import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
+*/
+
+// components (dynamic)
+const Menu = dynamic(() => import('../../components/Menu'));
+const Footer = dynamic(() => import('../../components/Footer'));
 
 // styles
 import ce from '../../styles/CommonElements.module.scss';
@@ -14,11 +21,12 @@ import artP from '../../styles/PageArticleNames.module.scss';
 
 // models
 import { PageProps } from "../../models/PageModel";
-import { LinkListType } from "../../models/ArticleModels";
+//import { LinkListType } from "../../models/ArticleModels";
 
 // data
 //import { LinkList } from "../../dataJson/articles_total";
 import { AF } from '../../dataJson/articles_total';
+
 
 //
 const Articles:FC<PageProps> = (props) => {

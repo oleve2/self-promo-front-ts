@@ -12,7 +12,7 @@ import img_fdbck_active from '../public/common/feedback_active.png';
 import FeedbackCard from "../components/FeedbackCard"
 
 // styles
-import ce from '../styles/CommonElements.module.scss';
+//import ce from '../styles/CommonElements.module.scss';
 import fdbks from './Feedbacks.module.scss';
 
 // data

@@ -1,11 +1,19 @@
 import { FC } from "react";
 import Image from "next/image";
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 
 // components
+/*
 import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
 import RulesCard from "../../components/RulesCard";
+*/
+
+// components (dynamic)
+const Menu = dynamic(() => import('../../components/Menu'));
+const Footer = dynamic(() => import('../../components/Footer'));
+const RulesCard = dynamic(() => import('../../components/RulesCard'));
 
 // styles
 import ce from '../../styles/CommonElements.module.scss';

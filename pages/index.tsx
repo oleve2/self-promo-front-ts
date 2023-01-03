@@ -4,8 +4,10 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { useState } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
-// components
+// components (static import)
+/*
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
 import ConsultCard from '../components/ConsultCard';
@@ -14,6 +16,17 @@ import CommunicationForm from '../components/CommunicationForm';
 import Feedbacks from '../components/Feedbacks';
 import MobileSlider from '../components/MobileSlider';
 import FeedbackCard from '../components/FeedbackCard';
+*/
+
+// components (dynamic import)
+const Menu              = dynamic(() => import('../components/Menu'));
+const Footer            = dynamic(() => import('../components/Footer'));
+const ConsultCard       = dynamic(() => import('../components/ConsultCard'));
+const ArticleCard       = dynamic(() => import('../components/ArticleCard')); 
+const CommunicationForm = dynamic(() => import('../components/CommunicationForm')); 
+const Feedbacks         = dynamic(() => import('../components/Feedbacks')); 
+const MobileSlider      = dynamic(() => import('../components/MobileSlider')); 
+const FeedbackCard      = dynamic(() => import('../components/FeedbackCard')); 
 
 
 // style

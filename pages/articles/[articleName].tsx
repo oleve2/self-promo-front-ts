@@ -3,10 +3,17 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
+import dynamic from 'next/dynamic';
 
 // components
+/*
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
+*/
+
+// components (dynamic)
+const Menu = dynamic(() => import('../../components/Menu'));
+const Footer = dynamic(() => import('../../components/Footer'));
 
 // styles
 import ce from '../../styles/CommonElements.module.scss';
